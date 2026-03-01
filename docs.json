@@ -16,23 +16,51 @@
         "pages": [
           "index",
           "quickstart",
-          "guides/getting-started",
-          "guides/core-features",
-          "guides/alter-window"
+          "getting-started/open-alter",
+          "getting-started/your-workspace",
+          "getting-started/first-workflows"
         ]
       },
       {
         "tab": "Guides",
+        "pages": [
+          "guides/index"
+        ],
         "groups": [
           {
-            "group": "Features",
+            "group": "Start Here",
             "pages": [
+              "guides/core-features",
+              "guides/alter-window",
               "guides/dictation",
-              "guides/meetings"
+              "guides/meetings",
+              "guides/getting-started"
             ]
           },
           {
-            "group": "Settings & Configuration",
+            "group": "Best Results (Do This Early)",
+            "pages": [
+              "guides/use-flow-orchestration",
+              "guides/managing-context-window"
+            ]
+          },
+          {
+            "group": "Daily Workflows",
+            "pages": [
+              "guides/workspaces-actions"
+            ]
+          },
+          {
+            "group": "Automations & Tools",
+            "pages": [
+              "guides/alter-actions",
+              "guides/integrations",
+              "guides/tool-manager",
+              "guides/url-callbacks"
+            ]
+          },
+          {
+            "group": "Settings & Personalization",
             "pages": [
               "guides/alter-settings",
               "guides/manage-settings",
@@ -40,27 +68,9 @@
             ]
           },
           {
-            "group": "AI Models",
+            "group": "Models",
             "pages": [
-              "guides/choosing-generative-model",
-              "guides/api-gateway"
-            ]
-          },
-          {
-            "group": "Integrations & Tools",
-            "pages": [
-              "guides/alter-actions",
-              "guides/integrations",
-              "guides/tool-manager",
-              "guides/url-callbacks",
-              "guides/workspaces-actions"
-            ]
-          },
-          {
-            "group": "Best Practices",
-            "pages": [
-              "guides/managing-context-window",
-              "guides/use-flow-orchestration"
+              "guides/choosing-generative-model"
             ]
           }
         ]
@@ -135,7 +145,8 @@
           {
             "group": "Getting Started",
             "pages": [
-              "references/api-router-overview"
+              "references/api-router-overview",
+              "guides/api-gateway"
             ]
           },
           {

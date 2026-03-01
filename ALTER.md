@@ -14,7 +14,7 @@ Rules for AI agents contributing to this Alter documentation repository.
 
 - Follow progressive disclosure.
 - Keep `SKILL.md` short and routing-focused.
-- Put detailed content in `references/`, `how-to/`, `guides/`, `use-cases/`, and `common-issues/`.
+- Put detailed content in `references/`, `how-to/`, `guides/`, `use-cases/`, `common-issues/`, and onboarding content in `getting-started/`.
 - Do not invent product facts. If unsure, mark as needing verification.
 
 ## 2) Content Placement
@@ -24,8 +24,18 @@ Rules for AI agents contributing to this Alter documentation repository.
 - `guides/`: full walkthroughs.
 - `use-cases/`: scenario playbooks.
 - `common-issues/`: symptoms, causes, fixes, verification.
+- `getting-started/`: onboarding-first pages for new users ("normie" friendly).
 
 When adding a new file, update the relevant `INDEX.md`.
+
+## 2.1) Information architecture and navigation rules
+
+- Keep top-level tab content unique in `docs.json`. Do not duplicate the same page in multiple tabs.
+- If similar content is needed in multiple places, create dedicated pages for each section and cross-link them.
+- `Getting Started` should contain only onboarding-specific pages under `getting-started/` plus `index` and `quickstart`.
+- `Guides` should contain deeper product walkthroughs under `guides/` and can include a hub page (`guides/index`).
+- `API Router` owns API-router-specific docs (for example `guides/api-gateway`, `references/api-router-overview`, `references/api-model-names`).
+- Prefer an onboarding flow: basics first, then best practices, then advanced workflows and settings.
 
 ## 3) Assets And Links
 
