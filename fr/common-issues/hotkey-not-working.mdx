@@ -1,0 +1,70 @@
+---
+title: "Le raccourci clavier ne fonctionne pas"
+description: "Résoudre les problèmes de raccourci clavier lorsque Alt+Espace ou votre raccourci personnalisé ne s'ouvre pas Alter"
+---
+<Note>
+  **Tout d'abord, vérifiez les bases :** Alter est-il réellement en cours d'exécution ? Recherchez l'icône Alter dans votre barre de menus en haut de votre écran.
+</Note>
+
+## Ce qui se passe ?
+
+Vous appuyez sur votre raccourci clavier (la valeur par défaut est `Alt + Space`), mais :
+- Il ne se passe rien du tout
+- Le menu rapide n'apparaît pas
+- Cela fonctionne dans certaines applications mais pas dans d'autres
+
+<AccordionGroup>
+  <Accordion icon="gear" title="Problème : le raccourci a été modifié">
+    **Solution :** Vérifiez sur quoi votre raccourci est réellement défini
+    
+    1. Ouvrez Alter (cliquez sur l'icône de la barre de menu si nécessaire)
+    2. Appuyez sur `Cmd + ,` pour ouvrir les paramètres
+    3. Accédez à l'onglet **Paramètres par défaut**
+    4. Regardez **Reliure de touches à encoche ouverte** – cela montre votre raccourci actuel
+    5. Appuyez sur `Alt + Space` (ou votre combo préféré) pour le définir
+  </Accordion>
+  
+  <Accordion icon="xmark" title="Problème : une autre application utilise le même raccourci">
+    **Solution :** Recherchez le conflit et modifiez-le
+    
+    Applications courantes qui utilisent `Alt + Space` :
+    - Alfred
+    - Raycast
+    - Pleins feux (parfois)
+    - Sélecteurs de langue
+    
+    **Essayez un autre raccourci :**
+    - `Cmd + Shift + A`
+    - `Ctrl + Option + Space`
+    - `Fn + F12`
+    
+    Choisissez quelque chose dont vous vous souvenez facilement et qu’aucune autre application n’utilise.
+  </Accordion>
+  
+  <Accordion icon="lock" title="Problème : problème d'autorisations">
+    **Solution :** Vérifiez les autorisations d'accessibilité
+    
+    Alter a besoin de l'autorisation d'accessibilité pour détecter les raccourcis clavier globaux :
+    
+    1. Ouvrez **Paramètres système** → **Confidentialité et sécurité** → **Accessibilité**
+    2. Assurez-vous que **Alter** est dans la liste et activé
+    3. S'il est grisé, cliquez sur l'icône de verrouillage et entrez votre mot de passe
+    4. Désactivez Alter, puis réactivez-le.
+  </Accordion>
+</AccordionGroup>
+
+## Test rapide
+
+Après avoir apporté des modifications :
+1. Cliquez sur n'importe quelle application (comme Safari ou Notes)
+2. Appuyez sur votre raccourci (`Alt + Space` ou ce que vous avez défini)
+3. **Succès :** Le panneau Alter l'encoche/rapide devrait apparaître immédiatement
+
+<Tip>
+  **Conseil de pro :** Vous pouvez également ouvrir Alter en passant votre souris sur l'encoche en haut de votre écran. Cela contourne complètement les raccourcis clavier !
+</Tip>
+
+## Aide associée
+
+- [Tous les raccourcis clavier](/fr/references/shortcuts)
+- [Comment changer votre raccourci clavier](/fr/how-to/change-hotkey)

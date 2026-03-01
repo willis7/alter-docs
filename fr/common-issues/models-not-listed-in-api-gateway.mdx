@@ -1,0 +1,80 @@
+---
+title: "API Gateway ne répertorie pas les modèles"
+description: "Correction des listes de modèles vides lors de la connexion d'applications externes à l'API d'Alter"
+---
+<Note>
+  **Vous utilisez API Gateway ?** Cela vous permet d'utiliser les modèles d'Alter dans d'autres applications comme SillyTavern, NovelCrafter ou votre propre code.
+</Note>
+
+## Ce qui se passe ?
+
+Vous essayez de connecter une autre application à l'API d'Alter, mais :
+- L'application se connecte mais n'affiche aucun modèle disponible
+- Vous devez saisir manuellement les noms de modèles
+- Les requêtes de modèle échouent sauf si vous spécifiez le nom exact
+
+## Pourquoi cela arrive
+
+De nombreuses applications d'IA s'attendent au format de modèle simple d'OpenAI (comme `gpt-5`), mais Alter prend en charge plusieurs fournisseurs. Nous utilisons donc un format spécial pour identifier de quel fournisseur provient chaque modèle.
+
+## La solution
+
+<Card title="Format du modèle : Fournisseur#Nom-du-modèle" icon="hashtag">
+  Au lieu de simplement `gpt-5`, utilisez : `OpenAI#gpt-5`
+  
+  Le format est toujours : **Nom du fournisseur** + **#** + **Nom du modèle**
+</Card>
+
+## Étapes de configuration
+
+<Steps>
+  <Step title="Obtenez vos informations d'identification API">
+    1. Ouvrez Alter → Paramètres (`Cmd + ,`)
+    2. Accédez à l'onglet **Routeur**
+    3. Cliquez sur **Ajouter une nouvelle clé** pour générer une clé API.
+    4. Copiez la clé (commence par `sk-...`)
+    5. Notez le point final : `https://alterhq.com/api`
+  </Step>
+  
+  <Step title="Configurez votre application externe">
+    Dans l'application que vous vous connectez :
+    - **URL de base :** `https://alterhq.com/api` (ou essayez `https://alterhq.com/api/v1`)
+    - **Clé API :** Votre clé générée à l'étape 1
+  </Step>
+  
+  <Step title="Définir manuellement le modèle">
+    Étant donné que la liste automatique peut ne pas fonctionner, saisissez manuellement un modèle :
+    
+    | Fournisseur | Nom du modèle | ID complet |
+    |----------|-----------|---------|
+    | OpenAI | GPT-5 | `OpenAI#gpt-5` |
+    | OpenAI | GPT-5 Nano | `OpenAI#gpt-5-nano` |
+    | Claude | Sonnet 4 | `Claude#claude-sonnet-4-6` |
+    | Gemini | 2.5 Pro | `Gemini#gemini-2.5-pro` |
+    | Mistral | Grand | `Mistral#mistral-large-latest` |
+    | Alter | Meilleur routeur | `Alter#best` |
+  </Step>
+</Steps>
+
+## Tester la connexion
+
+Essayez ce test simple :
+1. Envoyez une demande de fin de chat avec le modèle `OpenAI#gpt-5-nano`
+2. **Succès :** Vous devriez recevoir une réponse via Alter
+
+Si cela fonctionne avec un modèle, cela fonctionnera avec tous – changez simplement l’ID du modèle !
+
+<Tip>
+  **Conseil de pro :** L'API Alter fonctionne exactement comme l'API d'OpenAI. Si votre application prend en charge les points de terminaison « compatibles OpenAI », elle fonctionnera avec Alter.
+</Tip>
+
+## Vous rencontrez toujours des problèmes ?
+
+- Assurez-vous que vous utilisez une clé API Alter valide (et non la clé de votre fournisseur)
+- Essayez les deux points de terminaison : `/api` et `/api/v1`
+- Certaines applications mettent en cache la liste des modèles : essayez de redémarrer l'application après l'installation.
+
+## Aide associée
+
+- [Guide complet de la passerelle API](/fr/guides/api-gateway)
+- [Liste de tous les modèles disponibles](/fr/guides/choosing-generative-model)

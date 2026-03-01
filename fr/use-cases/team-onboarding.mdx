@@ -1,0 +1,159 @@
+---
+title: "Mettez votre équipe à jour avec Alter"
+description: "Comment intégrer de nouveaux membres de l'équipe avec des Workspaces partagés et des flux de travail d'IA cohérents"
+---
+<Info>
+  **Parfait pour :** Les chefs d'équipe, les gestionnaires et les organisations où plusieurs personnes doivent utiliser Alter de manière cohérente.
+</Info>
+
+## Le défi
+
+Vous avez une excellente configuration Alter :
+- Actions personnalisées pour les flux de travail de votre équipe
+- Paramètres soigneusement configurés
+- Workspaces partagés avec des fichiers importants
+- Modèles spécifiques qui fonctionnent le mieux pour vos tâches
+
+Mais chaque fois qu’un nouveau venu arrive, il doit tout repartir de zéro. Ils:
+- Utilisez les mauvais modèles
+- Je ne connais pas vos actions personnalisées
+- Recréez le travail que vous avez déjà effectué
+- Faire des sorties incohérentes
+
+## La solution : partagez votre configuration
+
+Alter facilite le partage de configurations afin que les nouveaux membres de l'équipe puissent être productifs dès le premier jour.
+
+## Intégration de l'équipe étape par étape
+
+<Steps>
+  <Step title="Créer une configuration de base">
+    Documentez les paramètres standard de votre équipe :
+    - **Modèle recommandé** (par exemple, "Utilisez Claude pour la révision du code, Gemini pour les tâches créatives")
+    - **Température par défaut** (par exemple, 0,7 pour une créativité équilibrée)
+    - **Touche de raccourci vocale** (standardiser sur `Fn` ou une touche personnalisée)
+    - **Conventions de dénomination des fichiers** pour les Workspaces
+  </Step>
+  
+  <Step title="Créer des Workspaces de démarrage">
+    Créez des Workspaces partagés avec un contexte commun :
+    - **Workspace Codebase :** Incluez les dossiers principaux de votre projet
+    - **Workspace de documentation :** Inclut les spécifications, les exigences et les guides de style
+    - **Workspace de base de connaissances :** Inclut les décisions passées, les FAQ et les wikis
+    
+    <Tip>
+      Les Workspaces sont stockés dans `~/Library/Application Support/Alter/Workspaces/`. Vous pouvez partager les fichiers `.alterworkspace` directement ou documenter comment les créer.
+    </Tip>
+  </Step>
+  
+  <Step title="Partager des actions personnalisées">
+    Exportez les actions les plus utiles de votre équipe :
+    1. Ouvrez **Action Editor** (à partir de la barre de menus).
+    2. Sélectionnez une action
+    3. Cliquez sur **Exporter** (ou appuyez sur `Cmd + E`)
+    4. Enregistrez le fichier `.json`
+    5. Partagez-le avec votre équipe
+    
+    Les nouveaux membres peuvent les importer avec `Cmd + O` dans l'éditeur d'actions.
+  </Step>
+  
+  <Step title="Créer un modèle de profil d'équipe">
+    Partagez un modèle de description de profil que les nouveaux membres peuvent coller dans Paramètres > Profil :
+    
+    ```
+    Role: [Job title]
+    Team: [Team name]
+    Communication style: [Direct/casual/formal]
+    
+    Common tools we use:
+    - GitHub repo: [URL]
+    - Project management: [Linear/Asana/Jira]
+    - Documentation: [Notion/Confluence]
+    
+    Technical context:
+    - Primary language: [Python/JavaScript/etc]
+    - Framework: [React/Django/etc]
+    - Key dependencies: [List main libraries]
+    ```
+  </Step>
+</Steps>
+
+## Exemple : Comment une équipe de développement l'utilise
+
+**La configuration :**
+- **Modèle standard :** Claude Sonnet pour la plupart des tâches
+- **Action de révision du code :** Préconfiguré pour vérifier les problèmes de sécurité, les tests et la documentation
+- **Workspace partagé :** Base de code principale + documentation API + guides de déploiement
+- **Profil de l'équipe :** Tout le monde inclut la structure du dépôt GitHub et les dépendances clés
+
+**Le résultat :**
+Lorsqu'un nouveau développeur rejoint :
+1. Ils installent Alter
+2. Importer les actions de l'équipe (5 minutes)
+3. Cloner l'Workspace partagé (2 minutes)  
+4. Collez le modèle de profil (1 minute)
+5. Ils sont immédiatement productifs : ils peuvent demander « Comment fonctionne le système d'authentification ? » et obtenez des réponses contextuelles
+
+## Le faire coller
+
+<AccordionGroup>
+  <Accordion icon="refresh" title="Séances de perfectionnement hebdomadaires">
+    Passez 15 minutes chaque semaine à réviser :
+    - Quelles actions les gens utilisent-ils ?
+    - Quelles invites fonctionnent le mieux ?
+    - Qu'est-ce qui rend les nouveaux membres confus ?
+    
+    Mettez à jour vos ressources partagées en fonction des commentaires.
+  </Accordion>
+  
+  <Accordion icon="users" title="Créer un canal de discussion d'équipe">
+    Avoir une chaîne dédiée (Slack/Discord) pour :
+    - Partager des invites utiles
+    - Publier de nouvelles actions
+    - Demander « Comment puis-je... ? » des questions
+    - Célébrer les victoires ("Alter vient de me faire gagner 2 heures !")
+  </Accordion>
+  
+  <Accordion icon="book" title="Tenir à jour un manuel de jeu d'équipe">
+    Documentez votre configuration Alter dans le wiki de votre équipe :
+    - Lien vers les actions exportées
+    - Instructions pour la configuration des Workspaces
+    - Bonnes pratiques pour votre domaine
+    - Erreurs courantes à éviter
+  </Accordion>
+</AccordionGroup>
+
+## Gains rapides pour différentes équipes
+
+<CardGroup cols={2}>
+  <Card title="Équipes d'ingénierie" icon="code">
+    - Actions de révision du code
+    - Aide au débogage avec votre pile technologique
+    - Générateur de documentation
+  </Card>
+  <Card title="Équipes marketing" icon="megaphone">
+    - Vérificateur vocal de marque
+    - Analyseur de brèves de campagne
+    - Assistant de calendrier de contenu
+  </Card>
+  <Card title="Équipes d'assistance" icon="headset">
+    - Modèles de réponse aux tickets
+    - Chercheur dans la base de connaissances
+    - Prédicteur d'escalade
+  </Card>
+  <Card title="Équipes produits" icon="box">
+    - Analyseur de commentaires des utilisateurs
+    - Clarificateur d'exigences
+    - Générateur de notes de version
+  </Card>
+</CardGroup>
+
+## Ressources connexes
+
+- [Guide des Workspaces](/fr/guides/workspaces-actions) – Comment créer et gérer des Workspaces
+- [Guide de l'éditeur d'actions](/fr/guides/alter-settings) – Création et partage d'actions personnalisées
+- [Choisir le bon modèle](/fr/guides/choosing-generative-model) – Modèle de recommandations par cas d'utilisation
+
+---
+
+**Commencez petit :** Choisissez une action ou un Workspace à partager cette semaine. Voyez comment votre équipe réagit, puis construisez à partir de là !

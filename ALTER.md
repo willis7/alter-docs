@@ -37,6 +37,16 @@ When adding a new file, update the relevant `INDEX.md`.
 - `API Router` owns API-router-specific docs (for example `guides/api-gateway`, `references/api-router-overview`, `references/api-model-names`).
 - Prefer an onboarding flow: basics first, then best practices, then advanced workflows and settings.
 
+## 2.2) Internationalization (i18n)
+
+- The docs now support multi-language navigation using `navigation.languages` in `docs.json`.
+- English uses `language: "en"` and remains the canonical source language.
+- French uses `language: "fr"` with files under `fr/`.
+- Keep mirrored paths when possible (for example `quickstart.mdx` -> `fr/quickstart.mdx`).
+- If a page is not translated yet, do not add it to French navigation until the file exists.
+- Keep top-level tab entries unique per language configuration to avoid Mintlify routing conflicts.
+- Translate frontmatter (`title`, `description`) and user-facing labels in tabs/groups/cards.
+
 ## 3) Assets And Links
 
 - Bundle media under `images/` directory.

@@ -10,156 +10,311 @@
   "favicon": "/favicon.svg",
   "playground": "interactive",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart",
-          "getting-started/open-alter",
-          "getting-started/your-workspace",
-          "getting-started/first-workflows"
-        ]
-      },
-      {
-        "tab": "Guides",
-        "pages": [
-          "guides/index"
-        ],
-        "groups": [
+        "language": "en",
+        "tabs": [
           {
-            "group": "Start Here",
+            "tab": "Getting Started",
             "pages": [
-              "guides/core-features",
-              "guides/alter-window",
-              "guides/dictation",
-              "guides/meetings",
-              "guides/getting-started"
+              "index",
+              "quickstart",
+              "getting-started/open-alter",
+              "getting-started/your-workspace",
+              "getting-started/first-workflows"
             ]
           },
           {
-            "group": "Best Results (Do This Early)",
+            "tab": "Guides",
             "pages": [
-              "guides/use-flow-orchestration",
-              "guides/managing-context-window"
+              "guides/index"
+            ],
+            "groups": [
+              {
+                "group": "Start Here",
+                "pages": [
+                  "guides/core-features",
+                  "guides/alter-window",
+                  "guides/dictation",
+                  "guides/meetings",
+                  "guides/getting-started"
+                ]
+              },
+              {
+                "group": "Best Results (Do This Early)",
+                "pages": [
+                  "guides/use-flow-orchestration",
+                  "guides/managing-context-window"
+                ]
+              },
+              {
+                "group": "Daily Workflows",
+                "pages": [
+                  "guides/workspaces-actions"
+                ]
+              },
+              {
+                "group": "Automations & Tools",
+                "pages": [
+                  "guides/alter-actions",
+                  "guides/integrations",
+                  "guides/tool-manager",
+                  "guides/url-callbacks"
+                ]
+              },
+              {
+                "group": "Settings & Personalization",
+                "pages": [
+                  "guides/alter-settings",
+                  "guides/manage-settings",
+                  "guides/settings"
+                ]
+              },
+              {
+                "group": "Models",
+                "pages": [
+                  "guides/choosing-generative-model"
+                ]
+              }
             ]
           },
           {
-            "group": "Daily Workflows",
-            "pages": [
-              "guides/workspaces-actions"
+            "tab": "How-To",
+            "groups": [
+              {
+                "group": "Quick Tasks",
+                "pages": [
+                  "how-to/open-alter",
+                  "how-to/add-context",
+                  "how-to/change-hotkey",
+                  "how-to/choose-language",
+                  "how-to/use-byok",
+                  "how-to/settings"
+                ]
+              }
             ]
           },
           {
-            "group": "Automations & Tools",
-            "pages": [
-              "guides/alter-actions",
-              "guides/integrations",
-              "guides/tool-manager",
-              "guides/url-callbacks"
+            "tab": "Use Cases",
+            "groups": [
+              {
+                "group": "Scenarios",
+                "pages": [
+                  "use-cases/meeting-workflow",
+                  "use-cases/local-model-privacy"
+                ]
+              }
             ]
           },
           {
-            "group": "Settings & Personalization",
-            "pages": [
-              "guides/alter-settings",
-              "guides/manage-settings",
-              "guides/settings"
+            "tab": "Troubleshooting",
+            "groups": [
+              {
+                "group": "Common Issues",
+                "pages": [
+                  "common-issues/mic-not-transcribing",
+                  "common-issues/hotkey-not-working",
+                  "common-issues/tool-not-working",
+                  "common-issues/custom-provider-not-showing",
+                  "common-issues/models-not-listed-in-api-gateway"
+                ]
+              }
             ]
           },
           {
-            "group": "Models",
-            "pages": [
-              "guides/choosing-generative-model"
+            "tab": "Reference",
+            "groups": [
+              {
+                "group": "Quick Reference",
+                "pages": [
+                  "references/faq-core",
+                  "references/general-faq",
+                  "references/pricing-faq",
+                  "references/shortcuts",
+                  "references/docs-map"
+                ]
+              },
+              {
+                "group": "Assets",
+                "pages": [
+                  "references/image-library"
+                ]
+              }
             ]
+          },
+          {
+            "tab": "API Router",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "references/api-router-overview",
+                  "guides/api-gateway"
+                ]
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "references/api-model-names"
+                ]
+              }
+            ],
+            "openapi": "openapi.json"
           }
         ]
       },
       {
-        "tab": "How-To",
-        "groups": [
+        "language": "fr",
+        "tabs": [
           {
-            "group": "Quick Tasks",
+            "tab": "Démarrage",
             "pages": [
-              "how-to/open-alter",
-              "how-to/add-context",
-              "how-to/change-hotkey",
-              "how-to/choose-language",
-              "how-to/use-byok",
-              "how-to/settings"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Use Cases",
-        "groups": [
-          {
-            "group": "Scenarios",
-            "pages": [
-              "use-cases/meeting-workflow",
-              "use-cases/local-model-privacy"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Troubleshooting",
-        "groups": [
-          {
-            "group": "Common Issues",
-            "pages": [
-              "common-issues/mic-not-transcribing",
-              "common-issues/hotkey-not-working",
-              "common-issues/tool-not-working",
-              "common-issues/custom-provider-not-showing",
-              "common-issues/models-not-listed-in-api-gateway"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Reference",
-        "groups": [
-          {
-            "group": "Quick Reference",
-            "pages": [
-              "references/faq-core",
-              "references/general-faq",
-              "references/pricing-faq",
-              "references/shortcuts",
-              "references/docs-map"
+              "fr/index",
+              "fr/quickstart",
+              "fr/getting-started/open-alter",
+              "fr/getting-started/your-workspace",
+              "fr/getting-started/first-workflows"
             ]
           },
           {
-            "group": "Assets",
+            "tab": "Guides",
             "pages": [
-              "references/image-library"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Router",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "references/api-router-overview",
-              "guides/api-gateway"
+              "fr/guides/index"
+            ],
+            "groups": [
+              {
+                "group": "Commencer ici",
+                "pages": [
+                  "fr/guides/core-features",
+                  "fr/guides/alter-window",
+                  "fr/guides/dictation",
+                  "fr/guides/meetings",
+                  "fr/guides/getting-started"
+                ]
+              },
+              {
+                "group": "Meilleurs résultats (à faire tôt)",
+                "pages": [
+                  "fr/guides/use-flow-orchestration",
+                  "fr/guides/managing-context-window"
+                ]
+              },
+              {
+                "group": "Flux de travail quotidiens",
+                "pages": [
+                  "fr/guides/workspaces-actions"
+                ]
+              },
+              {
+                "group": "Automatisations et Tools",
+                "pages": [
+                  "fr/guides/alter-actions",
+                  "fr/guides/integrations",
+                  "fr/guides/tool-manager",
+                  "fr/guides/url-callbacks"
+                ]
+              },
+              {
+                "group": "Paramètres et personnalisation",
+                "pages": [
+                  "fr/guides/alter-settings",
+                  "fr/guides/manage-settings",
+                  "fr/guides/settings"
+                ]
+              },
+              {
+                "group": "Modèles",
+                "pages": [
+                  "fr/guides/choosing-generative-model"
+                ]
+              }
             ]
           },
           {
-            "group": "Reference",
-            "pages": [
-              "references/api-model-names"
+            "tab": "Tutoriels",
+            "groups": [
+              {
+                "group": "Tâches rapides",
+                "pages": [
+                  "fr/how-to/open-alter",
+                  "fr/how-to/add-context",
+                  "fr/how-to/change-hotkey",
+                  "fr/how-to/choose-language",
+                  "fr/how-to/use-byok",
+                  "fr/how-to/settings"
+                ]
+              }
             ]
+          },
+          {
+            "tab": "Cas d'usage",
+            "groups": [
+              {
+                "group": "Scénarios",
+                "pages": [
+                  "fr/use-cases/meeting-workflow",
+                  "fr/use-cases/local-model-privacy"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Dépannage",
+            "groups": [
+              {
+                "group": "Problèmes courants",
+                "pages": [
+                  "fr/common-issues/mic-not-transcribing",
+                  "fr/common-issues/hotkey-not-working",
+                  "fr/common-issues/tool-not-working",
+                  "fr/common-issues/custom-provider-not-showing",
+                  "fr/common-issues/models-not-listed-in-api-gateway"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Reference",
+            "groups": [
+              {
+                "group": "Référence rapide",
+                "pages": [
+                  "fr/references/faq-core",
+                  "fr/references/general-faq",
+                  "fr/references/pricing-faq",
+                  "fr/references/shortcuts",
+                  "fr/references/docs-map"
+                ]
+              },
+              {
+                "group": "Ressources",
+                "pages": [
+                  "fr/references/image-library"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Routeur API",
+            "groups": [
+              {
+                "group": "Démarrage",
+                "pages": [
+                  "fr/references/api-router-overview",
+                  "fr/guides/api-gateway"
+                ]
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "fr/references/api-model-names"
+                ]
+              }
+            ],
+            "openapi": "openapi.json"
           }
-        ],
-        "openapi": "openapi.json"
+        ]
       }
-
-
     ],
     "global": {
       "anchors": [

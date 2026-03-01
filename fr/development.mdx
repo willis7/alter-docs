@@ -1,0 +1,105 @@
+---
+title: 'Contributing to Docs'
+description: 'Preview and contribute to Alter documentation locally'
+---
+<Info>
+  **Prérequis** :
+  - Node.js version 19 ou supérieure
+  - Git
+</Info>
+
+Suivez ces étapes pour prévisualiser la documentation Alter localement et apporter des modifications.
+
+<Steps>
+<Step title="Cloner le référentiel">
+
+```bash
+git clone https://github.com/wearedevx/alter-docs.git
+cd alter-docs/docs
+```
+</Step>
+
+<Step title="Installez la CLI Mintlify">
+
+```bash
+npm i -g mint
+```
+</Step>
+
+<Step title="Aperçu local">
+
+Exécutez la commande suivante dans le répertoire docs :
+
+```bash
+mint dev
+```
+
+Un aperçu local de la documentation sera disponible à l'adresse `http://localhost:3000`.
+
+</Step>
+</Steps>
+
+## Ports personnalisés
+
+Par défaut, Mintlify utilise le port 3000. Vous pouvez personnaliser le port à l'aide de l'indicateur `--port` :
+
+```bash
+mint dev --port 3333
+```
+
+## Validation des liens
+
+Vérifiez les liens rompus avant de soumettre des modifications :
+
+```bash
+mint broken-links
+```
+
+## Écriture assistée par l'IA
+
+Configurez votre Tool de codage d'IA pour qu'il fonctionne avec Mintlify :
+
+```bash
+npx skills add https://mintlify.com/docs
+```
+
+Cela installe la compétence de documentation de Mintlify pour les Tools d'IA tels que Claude Code, Cursor et Windsurf.
+
+## Déploiement
+
+Les modifications sont déployées automatiquement lorsqu'elles sont fusionnées avec la branche principale via l'intégration GitHub.
+
+<Frame>
+  <img src="/images/checks-passed.png" alt="Screenshot of a deployment confirmation message that says All checks have passed." style={{ borderRadius: '0.5rem' }} />
+</Frame>
+
+## Lignes directrices de contribution
+
+Avant de contribuer, veuillez lire :
+- [ALTER.md](/ALTER) - ​​Règles de contribution des agents IA
+- [AGENTS.md](/AGENTS) - ​​Instructions de projet pour les agents
+
+Points clés :
+- Utiliser le format MDX avec le frontmatter YAML
+- Suivez la structure de contenu existante
+- Utiliser les chemins `/images/` locaux pour les éléments
+- Exécutez `mint broken-links` avant de soumettre
+
+## Dépannage
+
+<AccordionGroup>
+  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
+
+    Cela peut être dû à une version obsolète du nœud. Essayez ce qui suit :
+    1. Supprimez la version actuellement installée de la CLI : `npm remove -g mint`
+    2. Effectuez une mise à niveau vers Node v19 ou une version ultérieure.
+    3. Réinstallez la CLI : `npm i -g mint`
+  </Accordion>
+
+  <Accordion title="Problème : rencontre d'une erreur inconnue">
+  
+    Solution : accédez à la racine de votre appareil et supprimez le dossier `~/.mintlify`. Ensuite, exécutez à nouveau `mint dev`.
+  </Accordion>
+</AccordionGroup>
+
+Curieux de savoir ce qui a changé dans la dernière version CLI ? Découvrez le [Journal des modifications CLI](https://www.npmjs.com/package/mintlify?activeTab=versions).

@@ -1,0 +1,93 @@
+---
+title: "Modèles personnalisés non affichés"
+description: "Correction des modèles OpenAI, Mistral ou locaux manquants dans le sélecteur de modèle"
+---
+<Note>
+  **Important :** Vous avez besoin d'une clé API de votre fournisseur (OpenAI, Mistral, etc.) avant qu'elle n'apparaisse dans Alter.
+</Note>
+
+## Ce qui se passe ?
+
+Vous avez ajouté votre clé API, mais lorsque vous appuyez sur `/` pour voir les modèles :
+- La section **Personnalisée** est vide
+- Vous ne voyez pas les modèles de votre fournisseur
+- Vous ne voyez que les modèles Alter Cloud
+
+## Erreurs de configuration courantes
+
+<AccordionGroup>
+  <Accordion icon="toggle-off" title="Le fournisseur personnalisé est désactivé">
+    Même avec une clé API saisie, vous devez activer les fournisseurs personnalisés :
+    
+    1. Ouvrir les paramètres d'Alter (`Cmd + ,`)
+    2. Accédez à l'onglet **Clés API**
+    3. Rechercher la section **Fournisseur personnalisé**
+    4. Activez **Activer le fournisseur personnalisé**
+    5. Vous devriez voir un ✓ à côté de « Point de terminaison personnalisé »
+  </Accordion>
+  
+  <Accordion icon="link" title="Mauvais format de point de terminaison (en particulier pour Azure)">
+    **Pour la plupart des fournisseurs :** Collez simplement votre clé API – le point de terminaison est automatique
+    
+    **Pour Azure en particulier**, vous avez besoin de l'URL complète :
+    ```
+    https://your-instance.openai.azure.com/openai/deployments/your-model-name/chat/completions?api-version=2024-02-15-preview
+    ```
+    
+    Assurez-vous que votre URL inclut :
+    - Le nom de votre instance
+    - Le nom du déploiement
+    - Le paramètre api-version
+  </Accordion>
+  
+  <Accordion icon="key" title="Clé API invalide ou expirée">
+    Vérifications rapides :
+    - As-tu copié la clé complète ? (Ils commencent généralement par `sk-`)
+    - La clé est-elle expirée ?
+    - Avez-vous mis en place une facturation avec le fournisseur ?
+    - Avez-vous accidentellement inclus des espaces supplémentaires ?
+    
+    Essayez de générer une nouvelle clé à partir du tableau de bord de votre fournisseur.
+  </Accordion>
+</AccordionGroup>
+
+## Guide d'installation rapide
+
+<Steps>
+  <Step title="Obtenez votre clé API">
+    - **OpenAI :** https://platform.openai.com/api-keys
+    - **Mistral :** https://console.mistral.ai/api-keys/
+    - **Gemini :** https://aistudio.google.com/app/apikey
+  </Step>
+  
+  <Step title="Entrez-le dans Alter">
+    1. Paramètres (`Cmd + ,`) → **Clés API**
+    2. Sélectionnez votre fournisseur dans la liste déroulante
+    3. Collez votre clé
+    4. Activer **Activer le fournisseur personnalisé**
+  </Step>
+  
+  <Step title="Vérifiez le sélecteur de modèle">
+    1. Appuyez sur `/` dans la zone d'invite Alter
+    2. Recherchez la section **Personnalisée**
+    3. Vous devriez voir les modèles de votre fournisseur répertoriés
+  </Step>
+</Steps>
+
+## Vérifiez que cela fonctionne
+
+Après la configuration :
+1. Appuyez sur `/` pour ouvrir le sélecteur de modèle
+2. Recherchez la catégorie **Personnalisée**
+3. Sélectionnez un de vos modèles personnalisés
+4. Envoyer un message test
+5. **Succès :** Le modèle répond en utilisant votre propre clé API !
+
+<Tip>
+  **Conseil budgétaire :** L'utilisation de votre propre clé API signifie que vous êtes facturé directement par le fournisseur. Surveillez votre consommation sur leur tableau de bord pour éviter les surprises !
+</Tip>
+
+## Aide associée
+
+- [Comment utiliser votre propre clé API](/fr/how-to/use-byok)
+- [Choisir des modèles d'IA](/fr/guides/choosing-generative-model)

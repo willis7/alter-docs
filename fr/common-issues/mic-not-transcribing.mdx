@@ -1,0 +1,94 @@
+---
+title: "Le microphone ne fonctionne pas"
+description: "Résoudre les problèmes de saisie vocale et de dictée lorsque Alter ne transcrit pas votre discours"
+---
+<Note>
+  **Vérification rapide :** Le microphone de votre Mac fonctionne-t-il dans d'autres applications comme les mémos vocaux ? Sinon, il s'agit d'un problème système et non d'un problème Alter.
+</Note>
+
+## Ce qui se passe ?
+
+Vous maintenez le bouton du microphone enfoncé ou appuyez sur votre touche de raccourci vocale, mais :
+- Rien ne se passe quand tu parles
+- La dictée démarre mais aucun texte n'apparaît
+- L'indicateur d'enregistrement s'affiche mais reste vide
+
+## Causes courantes
+
+<CardGroup cols={2}>
+  <Card title="Autorisations manquantes" icon="shield">
+    Alter n'est pas autorisé à accéder à votre microphone
+  </Card>
+  <Card title="Mauvais processeur vocal" icon="microphone">
+    Les modèles vocaux locaux ne sont ni téléchargés ni configurés
+  </Card>
+  <Card title="Inadéquation de la langue" icon="language">
+    La détection automatique de la langue ne fonctionne pas pour votre accent
+  </Card>
+  <Card title="Mauvais périphérique d'entrée" icon="speaker">
+    Alter utilise le mauvais microphone ou le système par défaut ne fonctionne pas
+  </Card>
+</CardGroup>
+
+## Comment y remédier
+
+<Steps>
+  <Step title="Vérifier les autorisations du microphone">
+    1. Ouvrez les **Paramètres système** sur votre Mac.
+    2. Accédez à **Confidentialité et sécurité** → **Microphone**
+    3. Assurez-vous que **Alter** est activé dans la liste
+    4. S'il est déjà activé, essayez de le désactiver, puis de le réactiver.
+  </Step>
+
+  <Step title="Sélectionnez le bon périphérique d'entrée">
+    Par défaut, Alter utilise le microphone par défaut de votre système, mais macOS ne le gère pas toujours correctement :
+    1. Recherchez le **bloc de contrôle** dans l'interface d'Alter (ou vérifiez la barre de menu)
+    2. Cliquez pour ouvrir le sélecteur de périphérique
+    3. Choisissez votre microphone spécifique dans la liste
+    4. Essayez de parler à nouveau
+
+    Cela résout des problèmes tels que :
+    - Alter ne capte aucun audio malgré les autorisations accordées
+    - Enregistrements de réunion capturant uniquement l'autre participant et pas vous
+    - Entrée audio de faible qualité ou intermittente
+  </Step>
+
+  <Step title="Vérifier les paramètres du processeur vocal">
+    1. Dans Alter, ouvrez **Paramètres** (`Cmd + ,`)
+    2. Accédez à l'onglet **Dictée**
+    3. Vérifiez que **Processeur vocal** est défini sur :
+       - **Cloud** (pour une meilleure précision)
+       - **Local (Apple)** (pour plus de confidentialité)
+       - Ou téléchargez un modèle Whisper si vous souhaitez un traitement hors ligne
+  </Step>
+  
+  <Step title="Définir la langue explicitement">
+    Si la détection automatique ne fonctionne pas :
+    1. Dans **Paramètres** → **Dictée**
+    2. Remplacez la **Langue de dictée** de « Automatique » par votre langue spécifique.
+    3. Essayez à nouveau de dicter
+  </Step>
+  
+  <Step title="Testez les deux modes">
+    Essayez les deux méthodes de saisie vocale :
+    - **Maintenez enfoncée pour parler** : maintenez `Fn` (ou votre raccourci vocal), parlez, puis relâchez
+    - **Cliquez pour dicter** : cliquez une fois sur l'icône du micro pour commencer, cliquez à nouveau pour terminer
+  </Step>
+</Steps>
+
+## Est-ce que ça a marché ?
+
+Essayez ce test rapide :
+1. Maintenez votre touche de raccourci vocale enfoncée (la valeur par défaut est `Fn`)
+2. Dites "Bonjour, c'est un test"
+3. Relâchez la clé
+4. **Succès :** Vous devriez voir "Bonjour, ceci est un test" apparaître dans la zone d'invite
+
+<Tip>
+  **Vous rencontrez toujours des problèmes ?** Essayez de redémarrer Alter après avoir accordé les autorisations. Parfois, macOS a besoin d'un nouveau départ pour reconnaître les nouvelles autorisations.
+</Tip>
+
+## Aide associée
+
+- [Paramètres de dictée](/fr/guides/settings#dictation)
+- [Comment changer le raccourci clavier vocal](/fr/how-to/change-hotkey)

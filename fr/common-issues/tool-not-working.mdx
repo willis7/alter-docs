@@ -1,0 +1,104 @@
+---
+title: "Les Tools ne fonctionnent pas"
+description: "Résoudre les intégrations quand Alter n'utilise pas vos Tools connectés"
+---
+
+<Note>
+  **Vérification rapide :** votre modèle IA prend-il en charge les Tools ? Certains petits modèles ne gèrent pas l'appel de Tools.
+</Note>
+
+## Ce qui se passe ?
+
+Vous demandez à Alter de faire une action, par exemple :
+- "Envoie un message à John"
+- "Ajoute un événement dans mon calendrier"
+
+Mais :
+- l'IA répond en texte au lieu d'agir,
+- rien ne se passe dans l'app cible,
+- ou vous voyez "Je n'ai pas accès".
+
+## Pourquoi ça arrive
+
+<CardGroup cols={2}>
+  <Card title="Modèle sans support Tools" icon="brain">
+    Le modèle répond en texte, mais ne peut pas appeler des Tools.
+  </Card>
+  <Card title="Tool non activé" icon="toggle-off">
+    Le Tool existe, mais il n'est pas activé dans le Tools Manager.
+  </Card>
+  <Card title="Demande trop vague" icon="message">
+    L'IA a besoin d'instructions claires sur le Tool à utiliser.
+  </Card>
+  <Card title="Bascule globale désactivée" icon="toggle-off">
+    La bascule globale dans Active Tools coupe tous les Tools.
+  </Card>
+</CardGroup>
+
+## Correction étape par étape
+
+<Steps>
+  <Step title="Passez à un modèle compatible Tools">
+    Essayez l'un de ces modèles :
+    - **Alter Best**
+    - **Gemini 2.0 Flash**
+    - **Claude Sonnet**
+    - **GPT-5**
+
+    Appuyez sur `/` dans la zone de prompt pour changer de modèle.
+  </Step>
+
+  <Step title="Vérifiez la bascule globale dans Active Tools">
+    1. Cliquez sur les **trois points** dans Alter -> **Tools Manager**
+    2. Dans la section **Active Tools**, trouvez la bascule globale
+    3. Assurez-vous qu'elle est **activée**
+
+    Si elle est désactivée, aucun Tool individuel ne fonctionnera.
+  </Step>
+
+  <Step title="Activez les bons Tools">
+    1. Ouvrez le **Tools Manager**
+    2. Activez le Tool voulu (Messages, Calendar, etc.)
+    3. Vérifiez la configuration (connexion, permissions)
+  </Step>
+
+  <Step title="Formulez une demande explicite">
+    Au lieu de : *"Dis à John que je suis en retard"*
+
+    Essayez : *"Envoie un message à John Smith disant 'J'arrive avec 10 minutes de retard' avec le Tool Messages"*
+  </Step>
+
+  <Step title="Cas Apple Shortcuts">
+    1. Ouvrez **Shortcuts**
+    2. Éditez votre raccourci
+    3. Ajoutez "Receive input from" et acceptez du texte
+    4. Enregistrez
+    5. Réessayez dans Alter
+  </Step>
+</Steps>
+
+## Test rapide
+
+1. Vérifiez que vous utilisez un modèle compatible Tools
+2. Activez le Tool **System Notification**
+3. Dites : "Send a system notification saying 'Test successful'"
+4. **Succès :** vous voyez une notification macOS
+
+<Tip>
+  **Commencez simple :** testez d'abord avec un Tool de base comme System Notification.
+</Tip>
+
+<Tip>
+  **Utilisez Flow :** si vous hésitez sur le bon Tool, activez [Flow](/fr/guides/use-flow-orchestration). Flow choisit automatiquement le bon Tool.
+</Tip>
+
+## Toujours bloqué ?
+
+Si un modèle fonctionne mal avec les Tools :
+1. passez à **Alter Best**,
+2. ou testez **Gemini 2.0 Flash** / **Claude Sonnet**.
+
+## Aide liée
+
+- [Guide du Tools Manager](/fr/guides/tool-manager)
+- [Vue d'ensemble des intégrations](/fr/guides/integrations)

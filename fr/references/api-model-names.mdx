@@ -1,0 +1,119 @@
+---
+title: "Référence du modèle d'API"
+description: "Liste complète des modèles d'IA disponibles via le routeur Alter API"
+---
+Cette référence répertorie tous les modèles d'IA disponibles via le routeur Alter API. Utilisez ces noms de modèles lorsque vous effectuez des requêtes API.
+
+## Format de dénomination du modèle
+
+Tous les modèles suivent le format : `Provider#Model-name`
+
+Par exemple : `OpenAI#gpt-5`, `Claude#claude-sonnet-4-6`
+
+## Modèles OpenAI
+
+| Nom du modèle | Descriptif | Fenêtre contextuelle |
+|------------|-------------|----------------|
+| `OpenAI#gpt-5` | Dernier modèle GPT-5 | 128 Ko |
+| `OpenAI#gpt-5-mini` | GPT-5 léger | 128 Ko |
+| `OpenAI#gpt-5-nano` | Variante GPT-5 la plus rapide | 128 Ko |
+| `OpenAI#o3` | Raisonnement avancé | 200 000 |
+| `OpenAI#o4-mini` | Raisonnement efficace | 200 000 |
+
+## Modèles Claude (anthropiques)
+
+| Nom du modèle | Descriptif | Fenêtre contextuelle |
+|------------|-------------|----------------|
+| `Claude#claude-sonnet-4-6` | Dernières Claude Sonnet | 200 000 |
+| `Claude#claude-opus-4-6` | Claude le plus compétent | 200 000 |
+| `Claude#claude-haiku-4-6` | Variante rapide Claude | 200 000 |
+
+## Modèles Gemini (Google)
+
+| Nom du modèle | Descriptif | Fenêtre contextuelle |
+|------------|-------------|----------------|
+| `Gemini#gemini-2.5-pro` | Gemini les plus capables | 1M |
+| `Gemini#gemini-2.5-flash` | Gemini rapides | 1M |
+| `Gemini#gemini-2.5-flash-lite` | Gemini légers | 1M |
+
+## Modèles Mistral
+
+| Nom du modèle | Descriptif | Fenêtre contextuelle |
+|------------|-------------|----------------|
+| `Mistral#mistral-large-latest` | Mistral le plus performant | 128 Ko |
+| `Mistral#mistral-small-latest` | Mistral efficace | 128 Ko |
+| `Mistral#codestral-2501` | Spécialiste des codes | 32K |
+| `Mistral#pixtral-large-latest` | Vision capable | 128 Ko |
+
+## Modèles de perplexité
+
+| Nom du modèle | Descriptif | Fenêtre contextuelle |
+|------------|-------------|----------------|
+| `Perplexity#sonar` | Modèle compatible Web | 128 Ko |
+| `Perplexity#sonar-pro` | Recherche Web avancée | 128 Ko |
+| `Perplexity#sonar-reasoning` | Raisonner avec le web | 128 Ko |
+
+## modèles Alter
+
+| Nom du modèle | Descriptif |
+|------------|-------------|
+| `Alter#best` | Sélectionne automatiquement le meilleur modèle |
+| `Alter#fair` | Option rentable |
+| `Alter#light` | Réponse la plus rapide |
+
+## Exemples d'utilisation
+
+### Python
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_API_KEY",
+    base_url="https://alterhq.com/api/v1"
+)
+
+# Use GPT-5
+response = client.chat.completions.create(
+    model="OpenAI#gpt-5",
+    messages=[{"role": "user", "content": "Hello!"}]
+)
+```
+
+### boucle
+```bash
+curl https://alterhq.com/api/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "OpenAI#gpt-5",
+    "messages": [{"role": "user", "content": "Hello!"}]
+  }'
+```
+
+## Conseils de sélection de modèle
+
+**Pour la vitesse**
+- `Alter#light`
+- `OpenAI#gpt-5-nano`
+- `Gemini#gemini-2.5-flash-lite`
+
+**Pour la qualité**
+- `Alter#best`
+- `OpenAI#gpt-5`
+- `Claude#claude-opus-4-6`
+- `Gemini#gemini-2.5-pro`
+
+**Pour le codage**
+- `OpenAI#gpt-5`
+- `Mistral#codestral-2501`
+- `Claude#claude-sonnet-4-6`
+
+**Pour Vision**
+- `OpenAI#gpt-5`
+- `Gemini#gemini-2.5-pro`
+- `Mistral#pixtral-large-latest`
+
+**Pour le coût**
+- `Alter#fair`
+- `Alter#light`
+- `OpenAI#gpt-5-nano`
