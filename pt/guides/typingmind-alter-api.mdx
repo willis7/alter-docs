@@ -1,0 +1,80 @@
+---
+title: "Configurar TypingMind com Alter API"
+description: "Conecte o TypingMind ao Alter API Router usando o formato OpenAI Chat Completions"
+---
+
+Use este guia para adicionar o Alter como provider customizado no TypingMind.
+
+## Abrir configuracao de modelo customizado
+
+No TypingMind, va para:
+
+`Settings` -> `Models` -> `+ Add Custom Model`
+
+## 1) Configuracao basica
+
+Preencha os campos assim:
+
+- `Name`: `Alter`
+- `API Type`: `OpenAI Chat Completions API`
+- `Endpoint URL`: `https://alterhq.com/api/v1/chat/completions`
+- `Model ID`: escolha um dos IDs suportados abaixo
+- `Context Length`: valor padrao ou qualquer valor que voce preferir
+
+![Configuracao basica do TypingMind](/images/integrations/typingmind-basic-config.png)
+
+## 2) Autenticacao
+
+Na secao Authentication:
+
+- `Authentication Type`: `No authentication`
+
+Nota: vamos enviar a API key manualmente via Custom Headers no proximo passo.
+
+## 3) Configuracao avancada (obrigatoria)
+
+Expanda `Advanced` no final e adicione um par de Custom Header:
+
+- `Key` (esquerda): `Authorization`
+- `Value` (direita): `Bearer <YOUR_API_KEY>`
+
+Substitua `<YOUR_API_KEY>` pela sua API key real do Alter.
+Garanta que exista um espaco entre `Bearer` e a key.
+
+![Header de autorizacao no TypingMind](/images/integrations/typingmind-auth-header.png)
+
+## Model IDs suportados
+
+Copie o `Model ID` exatamente como mostrado.
+
+### Claude (Anthropic)
+
+- `Claude#claude-3-5-sonnet-latest`
+- `Claude#claude-3-7-sonnet-20250219`
+- `Claude#claude-3-opus-20240229`
+- `Claude#claude-3-haiku-20240307`
+
+### OpenAI
+
+- `OpenAI#gpt-4o`
+- `OpenAI#gpt-4o-mini`
+- `OpenAI#chatgpt-4o-latest`
+- `OpenAI#gpt-4-turbo`
+
+### Gemini (Google)
+
+- `Gemini#gemini-2.0-flash-001`
+- `Gemini#gemini-2.0-flash-lite-001`
+- `Gemini#gemini-1.5-pro`
+- `Gemini#gemini-1.5-flash`
+
+### DeepSeek e outros (via Providers)
+
+- `Together#deepseek-ai/DeepSeek-R1`
+- `Together#deepseek-ai/DeepSeek-V3`
+- `Groq#deepseek-r1-distill-llama-70b`
+- `Perplexity#sonar-pro`
+
+<Tip>
+  Precisa da disponibilidade atual de modelos? Veja a [Referencia de modelos API](/pt/references/api-model-names).
+</Tip>

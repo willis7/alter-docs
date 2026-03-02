@@ -148,8 +148,23 @@
               {
                 "group": "Getting Started",
                 "pages": [
-                  "references/api-router-overview",
-                  "guides/api-gateway"
+                  "references/api-router-overview"
+                ]
+              },
+              {
+                "group": "Gateway & Router",
+                "pages": [
+                  "guides/api-gateway",
+                  "guides/api-router-development",
+                  "guides/api-router-operations"
+                ]
+              },
+              {
+                "group": "App Integrations",
+                "pages": [
+                  "guides/api-router-app-integrations",
+                  "guides/typingmind-alter-api",
+                  "guides/msty-alter-api"
                 ]
               },
               {
@@ -300,8 +315,23 @@
               {
                 "group": "Primeiros passos",
                 "pages": [
-                  "pt/references/api-router-overview",
-                  "pt/guides/api-gateway"
+                  "pt/references/api-router-overview"
+                ]
+              },
+              {
+                "group": "Gateway e Router",
+                "pages": [
+                  "pt/guides/api-gateway",
+                  "pt/guides/api-router-development",
+                  "pt/guides/api-router-operations"
+                ]
+              },
+              {
+                "group": "Integracoes de apps",
+                "pages": [
+                  "pt/guides/api-router-app-integrations",
+                  "pt/guides/typingmind-alter-api",
+                  "pt/guides/msty-alter-api"
                 ]
               },
               {
@@ -452,8 +482,23 @@
               {
                 "group": "Démarrage",
                 "pages": [
-                  "fr/references/api-router-overview",
-                  "fr/guides/api-gateway"
+                  "fr/references/api-router-overview"
+                ]
+              },
+              {
+                "group": "Passerelle et routeur",
+                "pages": [
+                  "fr/guides/api-gateway",
+                  "fr/guides/api-router-development",
+                  "fr/guides/api-router-operations"
+                ]
+              },
+              {
+                "group": "Integrations d'app",
+                "pages": [
+                  "fr/guides/api-router-app-integrations",
+                  "fr/guides/typingmind-alter-api",
+                  "fr/guides/msty-alter-api"
                 ]
               },
               {
@@ -604,8 +649,23 @@
               {
                 "group": "Primeros pasos",
                 "pages": [
-                  "es/references/api-router-overview",
-                  "es/guides/api-gateway"
+                  "es/references/api-router-overview"
+                ]
+              },
+              {
+                "group": "Gateway y Router",
+                "pages": [
+                  "es/guides/api-gateway",
+                  "es/guides/api-router-development",
+                  "es/guides/api-router-operations"
+                ]
+              },
+              {
+                "group": "Integraciones de apps",
+                "pages": [
+                  "es/guides/api-router-app-integrations",
+                  "es/guides/typingmind-alter-api",
+                  "es/guides/msty-alter-api"
                 ]
               },
               {
@@ -756,8 +816,23 @@
               {
                 "group": "Erste Schritte",
                 "pages": [
-                  "de/references/api-router-overview",
-                  "de/guides/api-gateway"
+                  "de/references/api-router-overview"
+                ]
+              },
+              {
+                "group": "Gateway & Router",
+                "pages": [
+                  "de/guides/api-gateway",
+                  "de/guides/api-router-development",
+                  "de/guides/api-router-operations"
+                ]
+              },
+              {
+                "group": "App-Integrationen",
+                "pages": [
+                  "de/guides/api-router-app-integrations",
+                  "de/guides/typingmind-alter-api",
+                  "de/guides/msty-alter-api"
                 ]
               },
               {
@@ -908,8 +983,23 @@
               {
                 "group": "快速开始",
                 "pages": [
-                  "zh/references/api-router-overview",
-                  "zh/guides/api-gateway"
+                  "zh/references/api-router-overview"
+                ]
+              },
+              {
+                "group": "Gateway 与 Router",
+                "pages": [
+                  "zh/guides/api-gateway",
+                  "zh/guides/api-router-development",
+                  "zh/guides/api-router-operations"
+                ]
+              },
+              {
+                "group": "应用集成",
+                "pages": [
+                  "zh/guides/api-router-app-integrations",
+                  "zh/guides/typingmind-alter-api",
+                  "zh/guides/msty-alter-api"
                 ]
               },
               {
@@ -1060,8 +1150,23 @@
               {
                 "group": "はじめに",
                 "pages": [
-                  "ja/references/api-router-overview",
-                  "ja/guides/api-gateway"
+                  "ja/references/api-router-overview"
+                ]
+              },
+              {
+                "group": "Gateway と Router",
+                "pages": [
+                  "ja/guides/api-gateway",
+                  "ja/guides/api-router-development",
+                  "ja/guides/api-router-operations"
+                ]
+              },
+              {
+                "group": "アプリ連携",
+                "pages": [
+                  "ja/guides/api-router-app-integrations",
+                  "ja/guides/typingmind-alter-api",
+                  "ja/guides/msty-alter-api"
                 ]
               },
               {

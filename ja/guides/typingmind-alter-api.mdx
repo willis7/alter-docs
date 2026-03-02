@@ -1,0 +1,80 @@
+---
+title: "TypingMind で Alter API を設定する"
+description: "OpenAI Chat Completions 形式で TypingMind を Alter API Router に接続する"
+---
+
+このガイドでは、TypingMind に Alter をカスタム provider として追加します。
+
+## カスタムモデル設定を開く
+
+TypingMind で次に進みます:
+
+`Settings` -> `Models` -> `+ Add Custom Model`
+
+## 1) 基本設定
+
+次のように設定します:
+
+- `Name`: `Alter`
+- `API Type`: `OpenAI Chat Completions API`
+- `Endpoint URL`: `https://alterhq.com/api/v1/chat/completions`
+- `Model ID`: 下の対応 ID から選択
+- `Context Length`: 既定値または任意の値
+
+![TypingMind 基本設定](/images/integrations/typingmind-basic-config.png)
+
+## 2) 認証
+
+Authentication セクションで:
+
+- `Authentication Type`: `No authentication`
+
+注: API key は次の手順で Custom Headers から手動で渡します。
+
+## 3) 高度な設定（必須）
+
+下部の `Advanced` を開き、Custom Header のペアを追加します:
+
+- `Key`（左）: `Authorization`
+- `Value`（右）: `Bearer <YOUR_API_KEY>`
+
+`<YOUR_API_KEY>` を実際の Alter API key に置き換えてください。
+`Bearer` とキーの間に半角スペースを 1 つ入れてください。
+
+![TypingMind Authorization Header](/images/integrations/typingmind-auth-header.png)
+
+## 対応 Model ID
+
+`Model ID` は表示どおりに正確にコピーしてください。
+
+### Claude（Anthropic）
+
+- `Claude#claude-3-5-sonnet-latest`
+- `Claude#claude-3-7-sonnet-20250219`
+- `Claude#claude-3-opus-20240229`
+- `Claude#claude-3-haiku-20240307`
+
+### OpenAI
+
+- `OpenAI#gpt-4o`
+- `OpenAI#gpt-4o-mini`
+- `OpenAI#chatgpt-4o-latest`
+- `OpenAI#gpt-4-turbo`
+
+### Gemini（Google）
+
+- `Gemini#gemini-2.0-flash-001`
+- `Gemini#gemini-2.0-flash-lite-001`
+- `Gemini#gemini-1.5-pro`
+- `Gemini#gemini-1.5-flash`
+
+### DeepSeek とその他（Providers 経由）
+
+- `Together#deepseek-ai/DeepSeek-R1`
+- `Together#deepseek-ai/DeepSeek-V3`
+- `Groq#deepseek-r1-distill-llama-70b`
+- `Perplexity#sonar-pro`
+
+<Tip>
+  最新のモデル提供状況が必要ですか？ [API モデルリファレンス](/ja/references/api-model-names) を確認してください。
+</Tip>

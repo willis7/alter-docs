@@ -8,7 +8,8 @@ Rules for AI agents contributing to this Alter documentation repository.
 - Pages are MDX files with YAML frontmatter
 - Configuration lives in `docs.json`
 - Run `mint dev` to preview locally
-- Run `mint broken-links` to check links
+- Run `mint validate` for local checks
+- Do **not** run `mint broken-links` on every local edit; broken link checks run in GitHub Actions CI
 
 ## 1) First Principles
 

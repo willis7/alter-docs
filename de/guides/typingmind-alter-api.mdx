@@ -1,0 +1,80 @@
+---
+title: "TypingMind mit Alter API einrichten"
+description: "Verbinden Sie TypingMind mit Alter API Router im OpenAI Chat Completions-Format"
+---
+
+Nutzen Sie diese Anleitung, um Alter in TypingMind als benutzerdefinierten Provider hinzuzufügen.
+
+## Benutzerdefiniertes Modell-Setup öffnen
+
+In TypingMind gehen Sie zu:
+
+`Settings` -> `Models` -> `+ Add Custom Model`
+
+## 1) Grundkonfiguration
+
+Setzen Sie die Felder wie folgt:
+
+- `Name`: `Alter`
+- `API Type`: `OpenAI Chat Completions API`
+- `Endpoint URL`: `https://alterhq.com/api/v1/chat/completions`
+- `Model ID`: wählen Sie eine der unterstützten IDs unten
+- `Context Length`: Standardwert oder ein beliebiger Wert
+
+![TypingMind Grundkonfiguration](/images/integrations/typingmind-basic-config.png)
+
+## 2) Authentifizierung
+
+Im Bereich Authentication:
+
+- `Authentication Type`: `No authentication`
+
+Hinweis: Den API-Key geben wir im nächsten Schritt manuell über Custom Headers mit.
+
+## 3) Erweiterte Konfiguration (erforderlich)
+
+`Advanced` unten aufklappen und ein Custom Header-Paar hinzufügen:
+
+- `Key` (links): `Authorization`
+- `Value` (rechts): `Bearer <YOUR_API_KEY>`
+
+Ersetzen Sie `<YOUR_API_KEY>` durch Ihren echten Alter API-Key.
+Achten Sie darauf, dass zwischen `Bearer` und dem Key genau ein Leerzeichen steht.
+
+![TypingMind Authorization Header](/images/integrations/typingmind-auth-header.png)
+
+## Unterstützte Model IDs
+
+Kopieren Sie die `Model ID` exakt wie angegeben.
+
+### Claude (Anthropic)
+
+- `Claude#claude-3-5-sonnet-latest`
+- `Claude#claude-3-7-sonnet-20250219`
+- `Claude#claude-3-opus-20240229`
+- `Claude#claude-3-haiku-20240307`
+
+### OpenAI
+
+- `OpenAI#gpt-4o`
+- `OpenAI#gpt-4o-mini`
+- `OpenAI#chatgpt-4o-latest`
+- `OpenAI#gpt-4-turbo`
+
+### Gemini (Google)
+
+- `Gemini#gemini-2.0-flash-001`
+- `Gemini#gemini-2.0-flash-lite-001`
+- `Gemini#gemini-1.5-pro`
+- `Gemini#gemini-1.5-flash`
+
+### DeepSeek und weitere (über Providers)
+
+- `Together#deepseek-ai/DeepSeek-R1`
+- `Together#deepseek-ai/DeepSeek-V3`
+- `Groq#deepseek-r1-distill-llama-70b`
+- `Perplexity#sonar-pro`
+
+<Tip>
+  Brauchen Sie aktuelle Modellverfügbarkeit? Siehe [API-Modellreferenz](/de/references/api-model-names).
+</Tip>
