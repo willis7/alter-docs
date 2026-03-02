@@ -1,0 +1,94 @@
+---
+title: "Modelos Personalizados Não Mostrando"
+description: "Corrigir os modelos em falta OpenAI, Mistral ou local no seletor de modelo"
+---
+
+<Note>
+**Importante:** Você precisa de uma chave API do seu provedor (OpenAI, Mistral, etc.) antes que eles aparecerão em Alter.
+</Note>
+
+## O que se passa?
+
+Você adicionou sua chave API, mas quando você pressiona `/` para ver modelos:
+- A seção ** Personalizada** está vazia
+- Você não vê os modelos do seu provedor
+- Você só vê modelos Alter Cloud
+
+## Erros comuns de configuração
+
+<AccordionGroup>
+  <Accordion icon="toggle-off" title="O provedor personalizado está desligado">
+Mesmo com uma chave API inserida, você precisa ativar provedores personalizados:
+    
+    1. Abrir a Configuração do Alter (`Cmd + ,`)
+    2. Ir para **API Keys** tab
+    3. Procurar ** Fornecedor Personalizado** seção
+    4. Alternar ** Ativar o Fornecedor Personalizado** para ON
+    5. Você deve ver um 文 ao lado de "Endpoint personalizado"
+  </Accordion>
+  
+  <Accordion icon="link" title="Formato de endpoint errado (especialmente para Azure)">
+**Para a maioria dos fornecedores:** Basta colar sua chave API – o endpoint é automático
+    
+**Para Azure especificamente **, você precisa do URL completo:
+    ```
+    https://your-instance.openai.azure.com/openai/deployments/your-model-name/chat/completions?api-version=2024-02-15-preview
+    ```
+    
+Certifique-se de que sua URL inclui:
+    - O seu nome de instância
+    - O nome da instalação
+    - O parâmetro api-versão
+  </Accordion>
+  
+  <Accordion icon="key" title="Chave API inválida ou expirada">
+Verificação rápida:
+    - Copiaste a chave completa? (Eles geralmente começam com `sk-`)
+    - A chave expirou?
+    - Você tem faturamento configurado com o provedor?
+    - Incluíste acidentalmente espaços extras?
+    
+Tente gerar uma nova chave do painel do seu provedor.
+  </Accordion>
+</AccordionGroup>
+
+## Guia de configuração rápido
+
+<Steps>
+  <Step title="Obtenha sua chave de API">
+    - **OpenAI:**https://platform.openai.com/api-keys
+    - **Mistral:** https://console.mistral.ai/api-keys/
+    - **Gemini:**https://aistudio.google.com/app/apikey
+  </Step>
+  
+  <Step title="Digite-o em Alter">
+    1. Configuração (`Cmd + ,`) → ** Chaves API**
+    2. Selecione seu provedor a partir do dropdown
+    3. Colar a sua chave
+    4. Alternar ** Ativar o Fornecedor Personalizado** ON
+  </Step>
+  
+  <Step title="Verificar o seletor do modelo">
+    1. Pressione `/` na caixa de prompt Alter
+    2. Procure a seção **Custom**
+    3. Você deve ver os modelos do seu provedor listados
+  </Step>
+</Steps>
+
+## Verifica se está a funcionar.
+
+Após a configuração:
+1. Pressione `/` para abrir o seletor de modelo
+2. Procure a categoria ** Personalizada**
+3. Selecione um de seus modelos personalizados
+4. Enviar uma mensagem de teste
+5. ** Sucesso: ** O modelo responde usando sua própria chave de API!
+
+<Tip>
+** Dica orçamental: ** Usando sua própria chave API significa que você é faturado diretamente pelo provedor. Monitore seu uso no painel para evitar surpresas!
+</Tip>
+
+## Ajuda relacionada
+
+- [Como usar sua própria chave API](/how-to/use-byok)
+- [Choosing AI models](/guides/choosing-generative-model)

@@ -1,0 +1,95 @@
+---
+title: "O microfone não está a funcionar"
+description: "Corrigir problemas de entrada de voz e ditados quando Alter não transcrever seu discurso"
+---
+
+<Note>
+* Verificação rápida:** O microfone do seu Mac está funcionando em outros aplicativos como o Voice Memos? Caso contrário, trata-se de um problema de sistema, não de Alter.
+</Note>
+
+## O que se passa?
+
+Você está segurando o botão do microfone ou pressionando sua tecla de voz, mas:
+- Nada acontece quando falas.
+- O ditado começa mas nenhum texto aparece
+- O indicador de gravação mostra mas permanece em branco
+
+## Causas comuns
+
+<CardGroup cols={2}>
+  <Card title="Permissões em Falta" icon="shield">
+Alter não tem permissão para acessar seu microfone
+  </Card>
+  <Card title="Processador de voz errado" icon="microphone">
+Os modelos de voz locais não são baixados ou configurados
+  </Card>
+  <Card title="Mismatch de Linguagem" icon="language">
+Detecção automática de linguagem não está a funcionar para o teu sotaque
+  </Card>
+  <Card title="Dispositivo de Entrada Errado" icon="speaker">
+Alter está usando o microfone ou sistema padrão errado não está funcionando
+  </Card>
+</CardGroup>
+
+## Como corrigi-lo
+
+<Steps>
+  <Step title="Verificar Permissões de Microfone">
+    1. Abra ** Configurações do sistema** no seu Mac
+    2. Vá para **Privacidade & Segurança** → **Microfone**
+    3. Certifique- se de que **Alter** está activo na lista
+    4. Se já está ligado, tente desligá-lo e voltar
+  </Step>
+
+  <Step title="Selecione o dispositivo de entrada direito">
+Por padrão, Alter usa o microfone padrão do sistema, mas o macOS nem sempre lida com isso corretamente:
+    1. Procure o bloco de controle ** na interface do Alter (ou verifique a barra de menu)
+    2. Clique para abrir o seletor do dispositivo
+    3. Escolha seu microfone específico da lista
+    4. Tenta falar outra vez.
+
+Isto corrige problemas como:
+    - Alter não capta nenhum áudio, apesar das permissões concedidas
+    - Encontro gravações capturando apenas o outro participante e não você
+    - Entrada de áudio intermitente ou de baixa qualidade
+  </Step>
+
+  <Step title="Verificar as Configurações do Processador de Voz">
+    1. Em Alter, abra **Configurações** (`Cmd + ,`)
+    2. Ir para a aba ** Ditação**
+    3. Verifique se ** Processador de Voz** está definido como:
+       - ** Nuvem** (para melhor precisão)
+       - ** Local (Apple)** (para privacidade)
+       - Ou baixe um modelo Whisper se quiser processamento offline
+  </Step>
+  
+  <Step title="Definir a Língua Explicitamente">
+Se a detecção automática não estiver a funcionar:
+    1. Em **Configurações** → **Dicação**
+    2. Alterar **Dictation Language** de "Automatic" para sua língua específica
+    3. Tente ditar novamente
+  </Step>
+  
+  <Step title="Testar ambos os modos">
+Tente ambas as formas de entrada de voz:
+    - ** Mantenha-se a falar**: Segure `Fn` (ou a tecla de atalho da sua voz), fale, depois solte
+    - ** Clique para ditar**: Clique no ícone do microfone uma vez para começar, clique novamente para terminar
+  </Step>
+</Steps>
+
+## Funcionou?
+
+Tente este teste rápido:
+1. Segure a tecla de voz (o padrão é `Fn`)
+2. Diz "Olá, isto é um teste"
+3. Lançar a chave
+4. ** Sucesso: ** Você deve ver "Olá, este é um teste" aparecer na caixa de prompt
+
+<Tip>
+** Ainda com problemas?** Tente reiniciar o Alter após conceder permissões. Às vezes, o macOS precisa de um novo começo para reconhecer novas permissões.
+</Tip>
+
+## Ajuda relacionada
+
+- [Configurações da ditado](/guides/settings#dictation)
+- [Como mudar a tecla de voz](/how-to/change-hotkey)

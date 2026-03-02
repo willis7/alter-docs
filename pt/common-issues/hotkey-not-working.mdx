@@ -1,0 +1,71 @@
+---
+title: "Atalho do teclado não está funcionando"
+description: "Corrigir problemas de teclas de atalho quando Alt+Space ou seu atalho personalizado não abrir Alter"
+---
+
+<Note>
+** Primeiro, verifique o básico:** O Alter está mesmo em execução? Procure o ícone Alter na barra de menus no topo da tela.
+</Note>
+
+## O que se passa?
+
+Você pressiona seu atalho de teclado (o padrão é `Alt + Space`), mas:
+- Não acontece nada.
+- O menu rápido não aparece
+- Ele funciona em alguns aplicativos, mas não em outros
+
+<AccordionGroup>
+  <Accordion icon="gear" title="Problema: O atalho foi alterado">
+**Solução:** Verifique em que atalho está definido
+    
+    1. Abra o Alter (clique no ícone da barra de menus, se necessário)
+    2. Pressione `Cmd + ,` para abrir as configurações
+    3. Ir para a página **Por omissão**
+    4. Olhar para ** Abrir entalhe de atalho** – isto mostra o seu atalho atual
+    5. Carregue em `Alt + Space` (ou na sua combinação preferida) para a configurar
+  </Accordion>
+  
+  <Accordion icon="xmark" title="Problema: Outro aplicativo está usando o mesmo atalho">
+**Solução:** Encontrar o conflito e mudá-lo
+    
+Aplicativos comuns que usam `Alt + Space`:
+    - Alfredo
+    - Raycast
+    - Destaque (por vezes)
+    - Interruptores de línguas
+    
+** Tente um atalho diferente:**
+    - `Cmd + Shift + A`
+    - `Ctrl + Option + Space`
+    - `Fn + F12`
+    
+Escolha algo que você pode facilmente lembrar e que nenhum outro aplicativo usa.
+  </Accordion>
+  
+  <Accordion icon="lock" title="Problema: Permissões">
+**Solution:** Verificar permissões de acessibilidade
+    
+Alter precisa de permissão de acessibilidade para detectar teclas de atalho globais:
+    
+    1. Abrir ** Configurações do sistema** → ** Privacidade & Segurança** → ** Acessibilidade**
+    2. Certifique- se de que **Alter** está na lista e está activo
+    3. Se estiver acinzentado, clique no ícone de bloqueio e digite sua senha
+    4. Activa ou desactiva o Alter e depois liga
+  </Accordion>
+</AccordionGroup>
+
+## Teste rápido
+
+Após fazer alterações:
+1. Clique em qualquer aplicativo (como Safari ou Notas)
+2. Pressione seu atalho (`Alt + Space` ou o que você definir)
+3. ** Sucesso: ** O painel Alter notch/rápido deve aparecer imediatamente
+
+<Tip>
+** Dica profissional:** Você também pode abrir Alter passando o mouse sobre o entalhe na parte superior da tela. Isto ignora completamente os atalhos de teclado!
+</Tip>
+
+## Ajuda relacionada
+
+- [Todos os atalhos de teclado](/references/shortcuts)
+- [Como mudar sua tecla de atalho](/how-to/change-hotkey)

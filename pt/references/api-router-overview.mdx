@@ -1,0 +1,87 @@
+---
+title: "Resumo do API Router"
+description: "Visão geral do serviço Alter API Router e dos objetivos compatíveis com OpenAI"
+---
+
+O Alter API Router é um gateway de API compatível com OpenAI que fornece acesso unificado a modelos de IA 92+ de fornecedores 10+ através de um único endpoint.
+
+## O que é o API Router?
+
+O API Router é um serviço centralizado que elimina a necessidade de gerenciar várias chaves de API e contas de faturamento em diferentes provedores de IA. Em vez de manter contas separadas com OpenAI, Anthropic, Google e outros, você pode usar Alter como seu único ponto de entrada para todo o acesso ao modelo de IA.
+
+### Principais Benefícios
+
+- ** Chave única de API** para todos os provedores
+- ** Cobrança centralizada** através da sua conta Alter
+- **92+ modelos** de 10+ fornecedores
+- ** Endpoint compatível com OpenAI** funciona com Tools existentes e SDKs
+- ** Mudança de modelo fácil** sem alterações de código
+
+## Início Rápido
+
+### 1. Gerar uma chave de API
+
+1. Abrir **Configurações** (** ,**)
+2. Ir para a página **Router**
+3. Em "Alter API Keys", clique em ** Adicionar nova chave**
+4. Copie sua chave (começa com `sk-`)
+
+### 2. Obtenha o ponto final
+
+```
+https://alterhq.com/api
+```
+
+Para a maioria das Tools, use:
+```
+https://alterhq.com/api/v1
+```
+
+### 3. Lista modelos disponíveis
+
+```bash
+curl https://alterhq.com/api/models \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+## Formato de Nomeação do Modelo
+
+Modelos usam o formato: `Provider#Model-name`
+
+Exemplos:
+- `OpenAI#gpt-5` - Último GPT-5
+- `OpenAI#gpt-5-mini` - GPT-5 leve
+- `Claude#claude-sonnet-4-6` - Último Claude
+- `Gemini#gemini-2.5-pro` - Último Gemini
+
+## Exemplo de Uso
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_API_KEY",
+    base_url="https://alterhq.com/api/v1"
+)
+
+response = client.chat.completions.create(
+    model="OpenAI#gpt-5",
+    messages=[
+        {"role": "user", "content": "What is machine learning?"}
+    ]
+)
+
+print(response.choices[0].message.content)
+```
+
+## Limites de Utilização
+
+- **Diário Limite**: 200 pedidos por dia em uso justo
+- ** Throttling**: Após 200 pedidos, estrangulado para 1 por 10 minutos
+- ** Reforço orçamental**: Disponível para acesso consistente além do uso justo
+
+## Passos Próximos
+
+- [Guia de Gateway API](/guides/api-gateway) - Documentação completa de utilização
+- [Modelo de designação](/references/api-model-names) - Lista completa de modelos
+- Referência OpenAPI - Documentação interativa da API

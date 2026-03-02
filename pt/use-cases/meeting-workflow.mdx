@@ -1,0 +1,110 @@
+---
+title: "Nunca perca itens de ação das reuniões"
+description: "Como gravar, transcrever e extrair automaticamente as tarefas de suas reuniões"
+---
+
+<Info>
+**Perfeito para:** Profissionais ocupados, líderes de equipa e quem quiser focar-se na conversa em vez de tomar notas.
+</Info>
+
+## O Problema
+
+Ficas em reuniões o dia todo. Quando chegas ao terceiro, não te lembras:
+- O que foi decidido na primeira reunião
+- Quem concordou em fazer o quê?
+- Quais são os seus itens de ação reais
+
+Você poderia tomar notas durante as reuniões, mas então você não está totalmente presente na conversa.
+
+## A solução: Deixe Alter lidar com isso
+
+Alter detecta automaticamente quando você está em reuniões e cria transcrições pesquisáveis com identificação de alto-falante. Então você pode pedir para extrair itens de ação, decisões e pontos-chave.
+
+## Exemplo do mundo real
+
+** Sarah, Gerente de Produto:**
+> "Eu costumava passar 30 minutos depois de cada reunião escrevendo notas. Agora Alter grava tudo, e eu só pergunto 'Quais são meus itens de ação?' e 'Quais decisões tomamos sobre a API?' Poupa-me horas todas as semanas."
+
+## Como configurar
+
+<Steps>
+  <Step title="Ativar a gravação automática">
+    1. Abrir a Configuração do Alter (`Cmd + ,`)
+    2. Ir para ** Dictation** tab
+    3. Ligar ** Reuniões de gravação automática**
+    4. Definir a duração mínima (por omissão: 2 minutos)
+    
+Agora o Alter irá detectar automaticamente chamadas Zoom, Google Meet e Teams e perguntar se você deseja gravar.
+  </Step>
+  
+  <Step title="Escolha sua qualidade de transcrição">
+**Opção 1: Processamento em nuvem** (mais rápido, mais preciso)
+    - Usa IA online para transcrição
+    - Melhor precisão para acentos e termos técnicos
+    
+**Opção 2: Whisper Pro** (Privado, funciona offline)
+    - Baixe um modelo local (recomendado: Whisper Large V3)
+    - Processamento 100% offline
+    - Ótimo para reuniões confidenciais
+  </Step>
+  
+  <Step title="Teste com uma reunião de amostra">
+    1. Junte-se a qualquer reunião (até mesmo um teste Zoom with yourself)
+    2. Clique em **Record** quando o Alter pedir, ou iniciar manualmente a gravação
+    3. Fale durante 2-3 minutos
+    4. Terminar a reunião
+    5. Aguarde 10 segundos para transcrição
+  </Step>
+</Steps>
+
+## Como extrair valor das transcrições
+
+Assim que tiver uma transcrição, tente estas instruções:
+
+<CardGroup cols={2}>
+  <Card title="Obter itens de ação" icon="check-circle">
+"Lista todos os itens de ação desta reunião e quem é responsável por cada"
+  </Card>
+  <Card title="Resumir as decisões" icon="gavel">
+"Que decisões foram tomadas? Liste-os com contexto"
+  </Card>
+  <Card title="Encontrar tópicos específicos" icon="search">
+"O que dissemos sobre o orçamento/horário/API?"
+  </Card>
+  <Card title="Criar um e- mail de acompanhamento" icon="envelope">
+"Desenvolva um e-mail de acompanhamento que resume esta reunião para a equipa"
+  </Card>
+</CardGroup>
+
+## Dicas profissionais
+
+<Tip>
+** Identificação do falante:** Alter usa IA para identificar diferentes falantes (falante 1, falante 2, etc.). Você pode renomeá-los manualmente após a reunião se você sabe quem eles são.
+</Tip>
+
+<Tip>
+** Pesquisa em todas as reuniões: ** Todas as transcrições são pesquisáveis. Digite `#` na caixa de prompt para pesquisar o conteúdo passado da reunião. Pergunta "O que disse o John sobre o roteiro nas reuniões da semana passada?"
+</Tip>
+
+<Tip>
+** Legendas ao vivo:** Ative legendas ao vivo durante as reuniões (Configurações > Voz > Habilitar legendas ao vivo) para acompanhar em tempo real, especialmente útil se a qualidade do áudio é ruim.
+</Tip>
+
+## Onde os seus dados vão
+
+Todas as transcrições são armazenadas **localmente em seu Mac** em:
+```
+~/Library/Application Support/Alter/Transcripts
+```
+
+Ninguém mais pode acessá-los a menos que os partilhe explicitamente.
+
+## Características relacionadas
+
+- [Guia Encontros](/guides/meetings) – Documentação completa sobre recursos de reunião
+- [Configurações de ditado](/guides/settings#dictation) – Configurar opções de transcrição
+- [Pesquisa do falante](/guides/meetings#speaker-search--identification) – Como funciona o ID do orador
+
+---
+
+** Pronto para experimentar? A sua próxima reunião é a altura perfeita para testar isto. Basta ligar o auto-gravação e ver o quanto mais fácil seu acompanhamento se torna!

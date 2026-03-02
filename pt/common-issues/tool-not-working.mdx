@@ -1,0 +1,106 @@
+---
+title: "Tools Não Funciona"
+description: "Corrigir integrações quando Alter não usar suas Tools e aplicativos conectados"
+---
+
+<Note>
+* Verificação rápida:** O seu modelo de IA escolhido suporta Tools? Alguns modelos menores não têm recursos de chamada de Tools.
+</Note>
+
+## O que se passa?
+
+Você pede ao Alter para fazer algo como "Enviar uma mensagem ao John" ou "Adicionar um evento de calendário", mas:
+- A IA responde com texto em vez de agir
+- Nada acontece no aplicativo alvo
+- "Não tenho acesso a isso" ou respostas semelhantes.
+
+## Por que isso acontece
+
+<CardGroup cols={2}>
+  <Card title="Modelo não suporta Tools" icon="brain">
+Alguns modelos de IA não podem chamar Tools – eles só geram texto
+  </Card>
+  <Card title="Tool Não Activado" icon="toggle-off">
+A Tool está disponível mas não está ligada no Tools Manager
+  </Card>
+  <Card title="Formato de Pedido Errado" icon="message">
+A IA precisa de instruções claras sobre qual Tool usar e como
+  </Card>
+  <Card title="Tools Global Ativar a Desligação" icon="toggle-off">
+Todas as Tools estão desactivadas através da opção global no Active Tools
+  </Card>
+</CardGroup>
+
+## Correcção passo a passo
+
+<Steps>
+  <Step title="Mudar para um modelo capaz de Tools">
+Nem todos os modelos podem usar Tools. Experimente um destes:
+    - **Alter Best** (nosso router inteligente)
+    - **Gemini 2.0 Flash**
+    - Sonnet Claude
+    - **GPT-5**
+    
+Pressione `/` na caixa de prompt para alternar modelos.
+  </Step>
+  
+  <Step title="Verificar a opção de Tools globais">
+No Tools Manager, há um interruptor mestre que pode desativar **all** Tools de uma vez:
+    1. Clique em ** três pontos** em Alter → **Tools Manager**
+    2. Procure a opção global na seção **Active Tools**
+    3. Assegure-se que está ligado ** (activado)
+    
+Se isso estiver desligado, nenhuma de suas Tools individuais funcionará mesmo que estejam habilitadas.
+  </Step>
+
+  <Step title="Ativar as Tools certas">
+Assim que a opção global estiver ativa, habilite Tools específicas:
+    1. No Tools Manager, encontre a Tool que deseja (Mensagens, Calendário, etc.)
+    2. Alterna- o para **
+    3. Verifique se precisa de configuração adicional (como iniciar sessão)
+  </Step>
+  
+  <Step title="Seja explícito em seu pedido">
+Em vez de: *"Diz ao John que estou atrasado"*
+    
+Tente: *"Enviar uma mensagem para John Smith dizendo 'Estou 10 minutos atrasado' usando a Tool Mensagens"*
+    
+Quanto mais específico for, melhor a IA entender.
+  </Step>
+  
+  <Step title="Para atalhos da Apple">
+Se utilizar os Atalhos da Apple:
+    1. Abra o aplicativo **Shortcuts**
+    2. Edite seu atalho
+    3. Adicionar "Receber entrada de" e defini-lo para aceitar texto
+    4. Gravar o atalho
+    5. Tente novamente em Alter
+  </Step>
+</Steps>
+
+## Testar
+
+Tente este teste simples:
+1. Certifique-se de usar um modelo capaz de Tools
+2. Ativar a Tool **Notificação do sistema**
+3. Dize-lhes: Enviai uma notificação do sistema, dizendo: Provai bem-sucedido!
+4. ** Sucesso: ** Você deve ver uma notificação do macOS aparecer!
+
+<Tip>
+** Começar simples:** Teste com Tools básicas como a Notificação do Sistema antes de tentar integrações complexas. Isso ajuda a identificar se é uma questão de Tool geral ou específica para uma integração.
+</Tip>
+
+<Tip>
+** Tente Flow:** Se você não tiver certeza de qual Tool usar ou ter problemas com a seleção de Tools, habilite [Flow](/guides/use-flow-orchestration) - O orquestrador de Tools do Alter que seleciona automaticamente a Tool certa para você.
+</Tip>
+
+## Ainda não está a funcionar?
+
+Alguns modelos são melhores em Tools do que outros. Se um modelo não está funcionando bem com Tools:
+1. Mudar para **Alter Best** (ele escolhe automaticamente modelos capazes)
+2. Ou tente **Gemini 2. 0 Flash** ou **Claude Sonnet**
+
+## Ajuda relacionada
+
+- [Guia de Gestão Tool](/guides/tool-manager)
+- [Observação global das integrações](/guides/integrations)

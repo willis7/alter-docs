@@ -1,0 +1,106 @@
+---
+title: 'Contribuir para os Docs'
+description: 'Antever e contribuir para a documentação do Alter localmente'
+---
+
+<Info>
+** Pré-requisitos**:
+  - Node.js versão 19 ou superior
+  - Git
+</Info>
+
+Siga estes passos para visualizar a documentação do Alter localmente e contribuir com alterações.
+
+<Steps>
+<Step title="Clonar o repositório">
+
+```bash
+git clone https://github.com/wearedevx/alter-docs.git
+cd alter-docs/docs
+```
+</Step>
+
+<Step title="Instalar o CLI Mintlify">
+
+```bash
+npm i -g mint
+```
+</Step>
+
+<Step title="Antever localmente">
+
+Execute o seguinte comando na pasta de documentos:
+
+```bash
+mint dev
+```
+
+Uma antevisão local da documentação estará disponível no `http://localhost:3000`.
+
+</Step>
+</Steps>
+
+## Portas personalizadas
+
+Por padrão, a Mintlify usa a porta 3000. Você pode personalizar a porta usando a bandeira `--port`:
+
+```bash
+mint dev --port 3333
+```
+
+## Validando links
+
+Verifique se há links quebrados antes de enviar alterações:
+
+```bash
+mint broken-links
+```
+
+## Escrita Assistida por IA
+
+Configure sua Tool de codificação de IA para trabalhar com Mintlify:
+
+```bash
+npx skills add https://mintlify.com/docs
+```
+
+Isso instala a habilidade de documentação da Mintlify para Tools de IA como Claude Code, Cursor e Windsurf.
+
+## Implantação
+
+As alterações são implantadas automaticamente quando mescladas ao branch principal através da integração do GitHub.
+
+<Frame>
+  <img src="/images/checks-passed.png" alt="Screenshot of a deployment confirmation message that says All checks have passed." style={{ borderRadius: '0.5rem' }} />
+</Frame>
+
+## Orientações Contribuintes
+
+Antes de contribuir, leia:
+- [ALTER.md](/ALTER) - Regras de contribuição do agente de IA
+- [AGENTS.md](/AGENTS) - Instruções de projecto para agentes
+
+Pontos-chave:
+- Usar o formato MDX com matéria frontal YAML
+- Siga a estrutura de conteúdo existente
+- Usar os caminhos locais do `/images/` para os activos
+- Executar o `mint broken-links` antes de enviar
+
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
+
+Isso pode ser devido a uma versão desatualizada do nó. Tente o seguinte:
+    1. Remova a versão atualmente instalada do CLI: `npm remove -g mint`
+    2. Atualize para Node v19 ou superior.
+    3. Reinstalar o CLI: `npm i -g mint`
+  </Accordion>
+
+  <Accordion title="Problema: Encontrando um erro desconhecido">
+  
+Solução: Aceda à raiz do seu dispositivo e apague a pasta `~/.mintlify`. Em seguida, execute `mint dev` novamente.
+  </Accordion>
+</AccordionGroup>
+
+Curioso sobre o que mudou na última versão do CLI? Confira o [alteração CLI](https://www.npmjs.com/package/mintlify?activeTab=versions).

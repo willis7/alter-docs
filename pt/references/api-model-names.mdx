@@ -1,0 +1,120 @@
+---
+title: "Referência do Modelo da API"
+description: "Lista completa de modelos de IA disponíveis através do Alter API Router"
+---
+
+Esta referência lista todos os modelos de IA disponíveis através do Alter API Router. Use estes nomes de modelos ao fazer pedidos de API.
+
+## Formato de Nomeação do Modelo
+
+Todos os modelos seguem o formato: `Provider#Model-name`
+
+Por exemplo: medicine, medicine
+
+## Modelos OpenAI
+
+Descrição do nome do modelo
+-------------------------------
+Mais recente modelo GPT-5
+`OpenAI#gpt-5-mini` GPT-5 leve
+□ `OpenAI#gpt-5-nano` □ a variante mais rápida do GPT-5
+• `OpenAI#o3` • Raciocínio avançado
+• `OpenAI#o4-mini` • Raciocínio eficiente
+
+## Modelos Claude (Antrópico)
+
+Descrição do nome do modelo
+-------------------------------
+Mais recente Sonnet Claude
+`Claude#claude-opus-4-6` Claude Mais capaz
+□ `Claude#claude-haiku-4-6` □ Fast Claude variant
+
+## Modelos Gemini (Google)
+
+Descrição do nome do modelo
+-------------------------------
+- `Gemini#gemini-2.5-pro` - Gemini - 1M
+`Gemini#gemini-2.5-flash` Gemini
+`Gemini#gemini-2.5-flash-lite` Gemini
+
+## Modelos Mistrales
+
+Descrição do nome do modelo
+-------------------------------
+□ `Mistral#mistral-large-latest` □ Mais capaz Mistral □ 128K
+□ `Mistral#mistral-small-latest`
+`Mistral#codestral-2501` Especialista em Códigos
+- `Mistral#pixtral-large-latest`
+
+## Modelos Perplexity
+
+Descrição do nome do modelo
+-------------------------------
+Modelo de conhecimento da Web
+- `Perplexity#sonar-pro` - Pesquisa avançada na Web
+• `Perplexity#sonar-reasoning` • Raciocínio com web
+
+## Modelos Alter
+
+Nome do modelo Descrição
+---------------------------
+O `Alter#best` Selecciona automaticamente o melhor modelo
+- `Alter#fair` - Opção rentável
+Resposta mais rápida
+
+## Exemplos de Uso
+
+### Python
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_API_KEY",
+    base_url="https://alterhq.com/api/v1"
+)
+
+# Use GPT-5
+response = client.chat.completions.create(
+    model="OpenAI#gpt-5",
+    messages=[{"role": "user", "content": "Hello!"}]
+)
+```
+
+### cURL
+```bash
+curl https://alterhq.com/api/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "OpenAI#gpt-5",
+    "messages": [{"role": "user", "content": "Hello!"}]
+  }'
+```
+
+## Modelo de dicas de seleção
+
+** Para a Velocidade **
+- `Alter#light`
+- `OpenAI#gpt-5-nano`
+- `Gemini#gemini-2.5-flash-lite`
+
+** Para a Qualidade**
+- `Alter#best`
+- `OpenAI#gpt-5`
+- `Claude#claude-opus-4-6`
+- `Gemini#gemini-2.5-pro`
+
+**Para codificação**
+- `OpenAI#gpt-5`
+- `Mistral#codestral-2501`
+- `Claude#claude-sonnet-4-6`
+
+** Para a Visão**
+- `OpenAI#gpt-5`
+- `Gemini#gemini-2.5-pro`
+- `Mistral#pixtral-large-latest`
+
+** Por Custo **
+- `Alter#fair`
+- `Alter#light`
+- `OpenAI#gpt-5-nano`
