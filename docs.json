@@ -770,6 +770,158 @@
             "openapi": "openapi.json"
           }
         ]
+      },
+      {
+        "language": "ja",
+        "tabs": [
+          {
+            "tab": "はじめに",
+            "pages": [
+              "ja/index",
+              "ja/quickstart",
+              "ja/getting-started/open-alter",
+              "ja/getting-started/your-workspace",
+              "ja/getting-started/first-workflows"
+            ]
+          },
+          {
+            "tab": "ガイド",
+            "pages": [
+              "ja/guides/index"
+            ],
+            "groups": [
+              {
+                "group": "ここから開始",
+                "pages": [
+                  "ja/guides/core-features",
+                  "ja/guides/alter-window",
+                  "ja/guides/dictation",
+                  "ja/guides/meetings",
+                  "ja/guides/getting-started"
+                ]
+              },
+              {
+                "group": "最良の結果（早めに設定）",
+                "pages": [
+                  "ja/guides/use-flow-orchestration",
+                  "ja/guides/managing-context-window"
+                ]
+              },
+              {
+                "group": "日常ワークフロー",
+                "pages": [
+                  "ja/guides/workspaces-actions"
+                ]
+              },
+              {
+                "group": "自動化と Tools",
+                "pages": [
+                  "ja/guides/alter-actions",
+                  "ja/guides/integrations",
+                  "ja/guides/tool-manager",
+                  "ja/guides/url-callbacks"
+                ]
+              },
+              {
+                "group": "設定とパーソナライズ",
+                "pages": [
+                  "ja/guides/alter-settings",
+                  "ja/guides/manage-settings",
+                  "ja/guides/settings"
+                ]
+              },
+              {
+                "group": "モデル",
+                "pages": [
+                  "ja/guides/choosing-generative-model"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "ハウツー",
+            "groups": [
+              {
+                "group": "クイックタスク",
+                "pages": [
+                  "ja/how-to/open-alter",
+                  "ja/how-to/add-context",
+                  "ja/how-to/change-hotkey",
+                  "ja/how-to/choose-language",
+                  "ja/how-to/use-byok",
+                  "ja/how-to/settings"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "ユースケース",
+            "groups": [
+              {
+                "group": "シナリオ",
+                "pages": [
+                  "ja/use-cases/meeting-workflow",
+                  "ja/use-cases/local-model-privacy"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "トラブルシューティング",
+            "groups": [
+              {
+                "group": "よくある問題",
+                "pages": [
+                  "ja/common-issues/mic-not-transcribing",
+                  "ja/common-issues/hotkey-not-working",
+                  "ja/common-issues/tool-not-working",
+                  "ja/common-issues/custom-provider-not-showing",
+                  "ja/common-issues/models-not-listed-in-api-gateway"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "リファレンス",
+            "groups": [
+              {
+                "group": "クイックリファレンス",
+                "pages": [
+                  "ja/references/faq-core",
+                  "ja/references/general-faq",
+                  "ja/references/pricing-faq",
+                  "ja/references/shortcuts",
+                  "ja/references/docs-map"
+                ]
+              },
+              {
+                "group": "アセット",
+                "pages": [
+                  "ja/references/image-library"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API Router",
+            "groups": [
+              {
+                "group": "はじめに",
+                "pages": [
+                  "ja/references/api-router-overview",
+                  "ja/guides/api-gateway"
+                ]
+              },
+              {
+                "group": "リファレンス",
+                "pages": [
+                  "ja/references/api-model-names"
+                ]
+              }
+            ],
+            "openapi": "openapi.json"
+          }
+        ]
       }
     ],
     "global": {

@@ -1,0 +1,399 @@
+---
+title: "コア機能"
+description: "AppSense、フォロー モード、Workspaces、アクション、および Alter をユニークなものにするその他の強力な機能について学びます"
+---
+
+<Info>
+  **Alter のスーパーパワーを発見してください。** これらの機能は、Mac での作業方法を変革します。
+</Info>
+
+## アプリとの対話
+
+### AppSense - Mac を理解する
+
+従来の画面キャプチャ方法とは異なり、AppSense は macOS アプリケーションから実際のデータを直接読み取るため、Alter は画面に表示されている以外の情報にアクセスできます。
+
+<CardGroup cols={2}>
+  <Card title="深い統合" icon="plug">
+    スクリーンショットだけでなくアプリデータにもアクセス
+  </Card>
+  <Card title="コンテキスト認識" icon="brain">
+    作業内容を自動的に理解する
+  </Card>
+</CardGroup>
+
+#### 現在のアプリケーション
+
+Alter は、アクティブなウィンドウをコンテキストとして使用することを自動的に提案します。
+
+<Steps>
+  <Step title="提案を探してください">
+    プロンプト ボックスの下にある [**現在のアプリケーション**] をクリックします。
+  </Step>
+  <Step title="またはキーボードを使用する">
+    `↓` を押してから `Enter` を押して選択します
+  </Step>
+</Steps>
+
+---
+
+## フォローモード
+
+フォロー モードは、チャット セッション中にアクティブなアプリケーション、ドキュメント、ファイルからのデータのリアルタイム同期を可能にする Alter の中核機能です。
+
+### 仕組み
+
+<AccordionGroup>
+  <Accordion icon="refresh-cw" title="リアルタイム監視">
+    フォロー モードは、作業中のアプリケーションとファイルの状態を継続的に監視し、会話の各段階で現在のワークフローに関する包括的なコンテキストを Alter に提供します。
+  </Accordion>
+  
+  <Accordion icon="lightbulb" title="実践例">
+    ランディング ページのコピーを作成中ですか?あなたが変更を加え、Alter をマーケティング コーチとして任命している間、Alter はあなたが何をしたか説明しなくても、あなたが行った変更を確認します。
+  </Accordion>
+</AccordionGroup>
+
+### フォローモードの使用
+
+<Steps>
+  <Step title="コンテキストを追加する">
+    含めたいアプリケーションまたはドキュメントをコンテキスト リストに追加します。
+  </Step>
+  <Step title="チャットを開始する">
+    Alter は、選択したアプリケーションの状態を自動的に追跡します
+  </Step>
+  <Step title="質問する">
+    現在画面に表示されていない場合でも、コンテンツについて質問する
+  </Step>
+  <Step title="働き続けてください">
+    チャット中に選択したアプリを操作したり、ドキュメントを更新したりできます
+  </Step>
+</Steps>
+
+<Tip>
+  **プロのヒント:** フォロー モードは、長い形式のコンテンツの作成に最適です。ドキュメントをコンテキストに一度追加すると、Alter がリアルタイムでフィードバックを提供する間、書き込みを続けられます。
+</Tip>
+
+---
+
+## ファイルとフォルダーの操作
+
+### ドラッグアンドドロップのサポート
+
+ファイルまたはフォルダーをハブまたは Alter のノッチにドラッグ アンド ドロップするか、**右クリック > Alter に追加** を使用します。
+
+### サポートされているファイルの種類
+
+<CardGroup cols={2}>
+  <Card title="書類" icon="file-text">
+    `.xlsx`、`.docx`、`.pdf`、`.txt`、`.md`、`.org`、`.rtf`
+  </Card>
+  <Card title="画像" icon="image">
+    `.jpg`、`.png`、`.heic`、`.gif`、`.tiff`、`.svg`
+  </Card>
+  <Card title="ウェブコンテンツ" icon="globe">
+    `.html`、URL、ドラッグされたテキスト
+  </Card>
+  <Card title="メール" icon="mail">
+    `.eml`、Apple Mail メッセージ
+  </Card>
+  <Card title="オーディオ" icon="music">
+    `.mp3`、`.wav`、`.m4a`、`.aac`、`.flac`
+  </Card>
+  <Card title="コード" icon="code">
+    すべてのプログラミング言語、構成ファイル、スクリプト
+  </Card>
+</CardGroup>
+
+<Note>
+  **特別な機能:** ディレクトリのドロップ、画像と PDF の OCR、自動テキスト エンコーディング検出。
+</Note>
+
+<Warning>
+  画像ファイルをドロップするときは、必ずビジョン機能を備えたモデル (GPT-4O や Gemini など) を使用してください。
+</Warning>
+
+### ビデオ: ファイルとチャットする
+
+<Frame>
+  <div className="embed-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eHZAT-D712Q" title="YouTubeビデオプレーヤー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</Frame>
+
+---
+
+## 自動文字起こし
+
+オーディオ ファイルまたはビデオ ファイルを追加すると、Alter がそれらを自動的に文字起こしします。
+
+<Frame>
+  <div className="embed-container" style={{marginBottom: '10px'}}>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/D7y5yuufdUo?si=xeuKKAZ1qCfsl-F6" title="YouTubeビデオプレーヤー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</Frame>
+
+### 特徴
+
+<CardGroup cols={2}>
+  <Card title="即時処理" icon="zap">
+    オーディオ ファイルとビデオ ファイルは Alter にドラッグすると自動的に文字起こしされます。
+  </Card>
+  <Card title="バッチ処理" icon="layers">
+    複数のファイルを同時にドロップして並行転写します
+  </Card>
+  <Card title="インタラクティブコンテンツ" icon="message-square">
+    文字に起こした内容について質問する
+  </Card>
+  <Card title="スマート検出" icon="search">
+    音声ファイルは自動的に会議コンテンツとして扱われます
+  </Card>
+</CardGroup>
+
+### 使用方法
+
+<Steps>
+  <Step title="ファイルをドロップする">
+    オーディオ ファイルまたはビデオ ファイルを The Hub または Alter のノッチにドラッグ アンド ドロップします。
+  </Step>
+  <Step title="転写を待つ">
+    文字起こしは自動的に開始されます - 手動操作は必要ありません
+  </Step>
+  <Step title="トランスクリプトを表示する">
+    コンテキスト内でファイルをクリックすると、文字起こしが表示されます
+  </Step>
+  <Step title="質問する">
+    「スティーブはスピーチで何と言ったのですか?」または「要点を要約する」
+  </Step>
+</Steps>
+
+---
+
+## __期間_6__
+
+Workspaces は、効率的な AI 支援ワークフローのためにフォルダー、ファイル、アプリのコレクションを保存、整理、自動的に更新できる強力な機能です。
+
+<CardGroup cols={3}>
+  <Card title="より速い応答" icon="zap">
+    クエリに関連するファイルのみを取得する
+  </Card>
+  <Card title="コスト効率が高い" icon="credit-card">
+    インテリジェントなインデックス作成により処理コストを削減
+  </Card>
+  <Card title="大規模プロジェクトを処理します" icon="folder-open">
+    大規模なフォルダーとコードベースを効率的に操作する
+  </Card>
+</CardGroup>
+
+### Workspaces の仕組み
+
+Workspaces 選択したリソースのインデックス付きマップを作成します。ファイルは自動的に変換されます。
+
+|ファイルの種類 |変換 |
+|----------|----------|
+| **PDF** |ページ マーカーを使用したマークダウン |
+| **DOCX** |マークダウン形式 |
+| **XLSX** |マークダウン/CSV形式 |
+| **画像** | OCR テキスト抽出 |
+| **ディレクトリ** |再帰処理 |
+
+<Note>
+  オーディオおよびビデオ ファイルはWorkspaceではまだサポートされていません。まず、Alter にドロップして転記します。
+</Note>
+
+### Workspaces でのファイルの編集
+
+<Tabs>
+  <Tab title="単一編集">
+    自然言語を使用して個々のファイルを編集または作成します。
+    - コードを変更する
+    - ドキュメントを更新する
+    - 関数のリファクタリング
+    - 新しいファイルを最初から作成する
+  </Tab>
+  
+  <Tab title="マルチエディット">
+    複数のファイルを同時に編集します。
+    - リファクタリングに最適
+    - ファイル全体でインポートを更新する
+    - コードベース全体で一貫した変更を行う
+  </Tab>
+  
+  <Tab title="バッシュ Tool">
+    高度な操作のために bash コマンドを実行します。
+    - スクリプトを実行する
+    - バッチ操作
+    - 複雑なワークフローの自動化
+  </Tab>
+</Tabs>
+
+<Info>
+  **セキュリティ第一:** すべての編集操作は、安全に実行するためのセキュリティ チェックを備えたシートベルト ポリシーを使用してサンドボックス化されます。
+</Info>
+
+### Workspace の作成
+
+<Steps>
+  <Step title="ハブを開く">
+    `Shift + Cmd + H` を押すか、メニュー バーから選択します
+  </Step>
+  <Step title="Workspaces に移動します">
+    サイドバーで Workspaces セクションを見つけます
+  </Step>
+  <Step title="新規作成">
+    Workspaceピッカーの**+**ボタンをクリックします
+  </Step>
+  <Step title="ファイルを追加する">
+    「ファイルの追加」ボタンを使用してフォルダーとファイルを選択します
+  </Step>
+</Steps>
+
+### Workspace ストレージ
+
+Workspaces はローカルの次の場所に保存されます。
+```
+~/Library/Application Support/Alter/Workspaces/
+```
+
+各Workspaceには次のものが含まれます。
+- Workspace 定義 (`.alterworkspace`)
+- ファイルとフォルダー
+- 変換されたファイルをキャッシュして高速アクセス
+
+### ビデオチュートリアル
+
+<Frame>
+  <div className="embed-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FlROt-rkg4M?si=BwVnZ6-9FptPRbss" title="YouTubeビデオプレーヤー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</Frame>
+
+---
+
+## YouTube ビデオとの対話
+
+YouTube ビデオ ページにアクセスする場合:
+- Alter は、要約するオプションを通知します。
+- ビデオのトランスクリプトがコンテキストに自動的に追加されます
+
+<Warning>
+  これは、YouTube ビデオに利用可能なトランスクリプトがある場合にのみ機能します (ほとんどの場合は可能ですが、すべてではありません)。
+</Warning>
+
+### ビデオチュートリアル
+
+<Frame>
+  <div className="embed-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LkZEH4wqI14" title="YouTubeビデオプレーヤー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</Frame>
+
+---
+
+## Alter アクション - ワークフロー
+
+Alter アクションは、トリガーと指示で構成された高度なプロンプトです。
+
+### アクションの作成
+
+<CardGroup cols={2}>
+  <Card title="アクションエディター" icon="edit">
+    メニューバーからアクセスして完全なコントロールが可能
+  </Card>
+  <Card title="クイック作成" icon="plus">
+    プロンプト ボックスに「作成 > Alter アクション」と入力します。
+  </Card>
+</CardGroup>
+
+<Note>
+  組み込みアクションは編集できませんが、複製したりカスタマイズしたりすることはできます。
+</Note>
+
+### 特注モデルの選択
+
+特定の AI モデルを個々のアクションに割り当てて、正確な制御を実現します。
+
+#### 異なるモデルを使用する理由
+
+<AccordionGroup>
+  <Accordion icon="shield" title="プライバシー最優先のワークフロー">
+    一般的なクエリにはクラウド モデルを維持しながら、機密性の高いタスクにはローカル モデルを使用します
+  </Accordion>
+  
+  <Accordion icon="gauge" title="特化したパフォーマンス">
+    Qwen3 などの高速でツールに最適化されたモデルを自動化に割り当て、クリエイティブなモデルを作成に使用します
+  </Accordion>
+  
+  <Accordion icon="piggy-bank" title="コストの最適化">
+    単純なタスクには軽量のローカル モデルを使用し、複雑な操作には強力なモデルを予約しておきます。
+  </Accordion>
+</AccordionGroup>
+
+#### セットアップ
+
+<Steps>
+  <Step title="アクションエディタを開く">
+    Alter ウィンドウの 3 つの点をクリックします。
+  </Step>
+  <Step title="アクションの選択">
+    カスタマイズする Alter アクションを選択してください
+  </Step>
+  <Step title="詳細に移動">
+    「詳細」セクションを見つけます
+  </Step>
+  <Step title="モデルを選択してください">
+    このアクションの特定のモデルを選択してください
+  </Step>
+  <Step title="保存">
+    アクションは選択したモデルを使用するようになりました
+  </Step>
+</Steps>
+
+### アクションレベル Tool のカスタマイズ
+
+各アクションで使用できるツールを正確に選択してください。
+
+#### 利点
+
+<CardGroup cols={2}>
+  <Card title="より迅速な実行" icon="zap">
+    ツールを必要なものだけに制限する
+  </Card>
+  <Card title="精度の向上" icon="target">
+    AI が無関係なツールを選択するのを防ぐ
+  </Card>
+  <Card title="コンテキストアウェア" icon="brain">
+    アクションごとに特化したワークフローを作成する
+  </Card>
+  <Card title="コスト効率が高い" icon="credit-card">
+    トークンの使用量を削減する
+  </Card>
+</CardGroup>
+
+#### 構成
+
+<Steps>
+  <Step title="アクションエディタを開く">
+    三点クリック→「アクションエディター」
+  </Step>
+  <Step title="アクションの選択">
+    Alter アクションを選択してください
+  </Step>
+  <Step title="Tools セクションを見つけます">
+    「詳細設定」の下を見てください
+  </Step>
+  <Step title="ツールを選択する">
+    特定のツールを選択するか、すべてを無効にする
+  </Step>
+</Steps>
+
+#### Tool 戦略を立てる
+
+- **最小限:** 集中的なアクションのための 1 つまたは 2 つのツール
+- **グループ化:** 特定のワークフローの関連ツール
+- **フルアクセス:** 汎用アクションのためのすべてのツール
+- **いいえ Tools:** クリエイティブまたは分析タスクの場合
+
+<Tip>
+  **プロのヒント:** 新しいアクションに対してすべてのツールを無効にしてから始めて、必要なものだけを追加します。これにより、最適なパフォーマンスが確保され、予期しないツールの使用が防止されます。
+</Tip>

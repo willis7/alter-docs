@@ -1,0 +1,87 @@
+---
+title: "API Router 概要"
+description: "Alter API Router サービスと OpenAI 互換エンドポイントの概要"
+---
+
+Alter API Router は、単一のエンドポイントを介して 10 を超えるプロバイダーの 92 を超える AI モデルへの統合アクセスを提供する OpenAI 互換の API ゲートウェイです。
+
+## API Router とは何ですか?
+
+API Router は、さまざまな AI プロバイダー間で複数の API キーと請求先アカウントを管理する必要をなくす一元化されたサービスです。 OpenAI、Anthropic、Google などで個別のアカウントを維持する代わりに、Alter をすべての AI モデル アクセスの単一のエントリ ポイントとして使用できます。
+
+### 主な利点
+
+- **すべてのプロバイダーに単一の API キー**
+- Alter アカウントによる **集中請求**
+- **10 社以上のプロバイダーの **92 以上のモデル**
+- **OpenAI 互換エンドポイント** は既存のツールおよび SDK で動作します
+- **コードを変更せずに簡単にモデルを切り替える**
+
+## クイックスタート
+
+### 1. APIキーの生成
+
+1. **設定**を開きます (**⌘ ,**)
+2. **ルーター** タブに移動します
+3. 「Alter API キー」で、**新しいキーの追加** をクリックします。
+4. キーをコピーします (`sk-` で始まる)
+
+### 2. エンドポイントを取得する
+
+```
+https://alterhq.com/api
+```
+
+ほとんどのツールでは、以下を使用します。
+```
+https://alterhq.com/api/v1
+```
+
+### 3. 利用可能なモデルのリスト
+
+```bash
+curl https://alterhq.com/api/models \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+## モデルの命名形式
+
+モデルは次の形式を使用します: `Provider#Model-name`
+
+例:
+- `OpenAI#gpt-5` - 最新の GPT-5
+- `OpenAI#gpt-5-mini` - 軽量 GPT-5
+- `Claude#claude-sonnet-4-6` - 最新の Claude
+- `Gemini#gemini-2.5-pro` - 最新の Gemini
+
+## 使用例
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_API_KEY",
+    base_url="https://alterhq.com/api/v1"
+)
+
+response = client.chat.completions.create(
+    model="OpenAI#gpt-5",
+    messages=[
+        {"role": "user", "content": "What is machine learning?"}
+    ]
+)
+
+print(response.choices[0].message.content)
+```
+
+## 使用制限
+
+- **1 日の制限**: フェアユースの下では 1 日あたり 200 リクエスト
+- **スロットル**: 200 リクエストの後、10 分あたり 1 件にスロットルされます。
+- **予算の追加**: フェアユースを超えた一貫したアクセスが可能
+
+## 次のステップ
+
+- [API ゲートウェイガイド](/guides/api-gateway) - 完全な使用法ドキュメント
+- [モデル命名思考](/references/api-model-names) - 完全なモデルリスト
+- OpenAPI リファレンス - インタラクティブ API ドキュメント
