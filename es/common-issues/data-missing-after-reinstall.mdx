@@ -1,0 +1,53 @@
+---
+title: "Faltan datos despues de reinstalar o limpiar"
+description: "Entienda por que pueden desaparecer chats y transcripciones despues de desinstalar Alter y que opciones de recuperacion pueden seguir existiendo."
+---
+
+## Que esta pasando
+
+Despues de reinstalar Alter, abre la app y sus chats, transcripciones u otro historial local ya no estan.
+
+Esto suele pasar despues de:
+
+- Usar CleanMyMac u otra utilidad de desinstalacion
+- Eliminar la app y sus archivos de soporte relacionados
+- Hacer un downgrade desinstalando primero en lugar de reemplazar la app en `Applications`
+
+## Por que pasa esto
+
+<Warning>
+  Los datos de Alter son solo locales. No existe restauracion del historial en la nube para chats, transcripciones u otros datos locales de la app.
+</Warning>
+
+Si una herramienta de desinstalacion elimina los archivos de soporte de Alter, puede borrar la base de datos local y los archivos de transcripcion junto con la app.
+
+## Que puede comprobar
+
+1. Abra la ubicacion de datos locales desde la configuracion de Alter si el acceso directo aun esta disponible.
+2. Compruebe si sus archivos de Alter siguen en `~/Library/Application Support/Alter`.
+3. Si usa Time Machine u otra copia de seguridad del Mac, restaure los datos faltantes de Alter desde esa copia.
+
+## Cuando la recuperacion es poco probable
+
+Si la herramienta de desinstalacion ya elimino los archivos de soporte de Alter y no tiene una copia de seguridad separada, normalmente no se pueden restaurar los chats y transcripciones faltantes.
+
+## Como evitarlo la proxima vez
+
+<Steps>
+  <Step title="No desinstale antes de cambiar de version">
+    Descargue la version que quiera desde [alterhq.com/changelog](https://alterhq.com/changelog) y reemplace la app en `Applications`.
+  </Step>
+
+  <Step title="Haga copia de seguridad de los datos locales primero">
+    Copie sus datos de Alter a otra ubicacion o asegurese de que su copia habitual del Mac este actualizada.
+  </Step>
+
+  <Step title="Evite desinstaladores de limpieza para solucionar problemas">
+    Pruebe primero con un reemplazo simple de la app. Las herramientas de limpieza son mejores solo cuando quiere un reinicio completo.
+  </Step>
+</Steps>
+
+## Ayuda relacionada
+
+- [Reinstalar o bajar de version Alter de forma segura](/es/how-to/reinstall-or-downgrade-alter)
+- [Datos locales y privacidad](/es/references/local-data-and-privacy)

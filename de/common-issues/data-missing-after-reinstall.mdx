@@ -1,0 +1,53 @@
+---
+title: "Daten fehlen nach Neuinstallation oder Bereinigung"
+description: "Verstehen Sie, warum Chats und Transkripte nach einer Deinstallation von Alter verschwinden koennen und welche Wiederherstellungsoptionen es noch gibt."
+---
+
+## Was passiert?
+
+Nach der Neuinstallation von Alter oeffnen Sie die App und Ihre Chats, Transkripte oder andere lokale Historie sind verschwunden.
+
+Das passiert oft nach:
+
+- Der Verwendung von CleanMyMac oder einem anderen Deinstallations-Tool
+- Dem Entfernen der App zusammen mit zugehoerigen Support-Dateien
+- Einem Downgrade, bei dem zuerst deinstalliert wurde, statt die App in `Applications` zu ersetzen
+
+## Warum das passiert
+
+<Warning>
+  Alter-Daten sind nur lokal vorhanden. Es gibt keine Cloud-Wiederherstellung fuer Chats, Transkripte oder andere lokale App-Daten.
+</Warning>
+
+Wenn ein Deinstallations-Tool die Support-Dateien von Alter loescht, kann es gleichzeitig die lokale Datenbank und die Transkriptdateien entfernen.
+
+## Was Sie pruefen koennen
+
+1. Oeffnen Sie den lokalen Datenordner aus den Alter-Einstellungen, falls der Shortcut noch verfuegbar ist.
+2. Pruefen Sie, ob Ihre Alter-Dateien noch in `~/Library/Application Support/Alter` vorhanden sind.
+3. Wenn Sie Time Machine oder ein anderes Mac-Backup nutzen, stellen Sie die fehlenden Alter-Daten daraus wieder her.
+
+## Wann eine Wiederherstellung unwahrscheinlich ist
+
+Wenn das Deinstallations-Tool die Alter-Support-Dateien bereits entfernt hat und Sie kein separates Backup haben, koennen die fehlenden Chats und Transkripte meist nicht wiederhergestellt werden.
+
+## So vermeiden Sie das beim naechsten Mal
+
+<Steps>
+  <Step title="Deinstallieren Sie nicht vor einem Versionswechsel">
+    Laden Sie die gewuenschte Version aus dem [alterhq.com/changelog](https://alterhq.com/changelog) herunter und ersetzen Sie die App in `Applications`.
+  </Step>
+
+  <Step title="Sichern Sie lokale Daten zuerst">
+    Kopieren Sie Ihre Alter-Daten an einen anderen Ort oder stellen Sie sicher, dass Ihr normales Mac-Backup aktuell ist.
+  </Step>
+
+  <Step title="Vermeiden Sie Bereinigungs-Deinstallationen fuer Troubleshooting">
+    Probieren Sie zuerst einen einfachen App-Ersatz. Bereinigungstools sind nur sinnvoll, wenn Sie wirklich einen kompletten Reset wollen.
+  </Step>
+</Steps>
+
+## Verwandte Hilfe
+
+- [Alter sicher neu installieren oder downgraden](/de/how-to/reinstall-or-downgrade-alter)
+- [Lokale Daten und Datenschutz](/de/references/local-data-and-privacy)

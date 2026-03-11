@@ -1,0 +1,53 @@
+---
+title: "Data missing after reinstall or cleanup"
+description: "Understand why chats and transcripts can disappear after uninstalling Alter and what recovery options you may still have."
+---
+
+## What's happening?
+
+After reinstalling Alter, you open the app and your chats, transcripts, or other local history are gone.
+
+This often happens after:
+
+- Using CleanMyMac or another uninstall utility
+- Removing the app and related support files
+- Downgrading by uninstalling first instead of replacing the app in `Applications`
+
+## Why this happens
+
+<Warning>
+  Alter data is local-only. There is no cloud history restore for chats, transcripts, or other local app data.
+</Warning>
+
+If an uninstall tool deletes Alter's support files, it can remove the local database and transcript files along with the app.
+
+## What you can check
+
+1. Open the local data location from Alter settings if the shortcut is still available.
+2. Check whether your Alter files are still present in `~/Library/Application Support/Alter`.
+3. If you use Time Machine or another Mac backup, restore the missing Alter data from that backup.
+
+## When recovery is unlikely
+
+If the uninstall utility already removed the Alter support files and you do not have a separate backup, the missing chats and transcripts usually cannot be restored.
+
+## How to avoid this next time
+
+<Steps>
+  <Step title="Do not uninstall before changing versions">
+    Download the version you want from [alterhq.com/changelog](https://alterhq.com/changelog) and replace the app in `Applications`.
+  </Step>
+
+  <Step title="Back up local data first">
+    Copy your Alter data to another location or make sure your normal Mac backup is current.
+  </Step>
+
+  <Step title="Avoid cleanup uninstallers for troubleshooting">
+    Use a simple app replacement first. Cleanup tools are best only when you want a full reset.
+  </Step>
+</Steps>
+
+## Related help
+
+- [Reinstall or downgrade Alter safely](/how-to/reinstall-or-downgrade-alter)
+- [Local data and privacy](/references/local-data-and-privacy)

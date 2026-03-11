@@ -1,0 +1,53 @@
+---
+title: "重新安装或清理后数据丢失"
+description: "了解为什么在卸载 Alter 后聊天和转录可能会消失，以及您还可以尝试哪些恢复方式。"
+---
+
+## 发生了什么
+
+重新安装 Alter 后，您打开应用，发现聊天、转录或其他本地历史记录不见了。
+
+这通常发生在以下情况之后：
+
+- 使用了 CleanMyMac 或其他卸载工具
+- 删除了应用以及相关支持文件
+- 先卸载再降级，而不是直接替换 `Applications` 中的应用
+
+## 为什么会这样
+
+<Warning>
+  Alter 数据仅保存在本地。聊天、转录和其他本地应用数据都没有云端历史恢复功能。
+</Warning>
+
+如果卸载工具删除了 Alter 的支持文件，它可能会连同本地数据库和转录文件一起删掉。
+
+## 您可以检查什么
+
+1. 如果设置中的数据位置快捷入口仍可用，请从 Alter 设置中打开本地数据位置。
+2. 检查 `~/Library/Application Support/Alter` 中是否还存在 Alter 文件。
+3. 如果您使用 Time Machine 或其他 Mac 备份，请从备份中恢复丢失的 Alter 数据。
+
+## 什么时候几乎无法恢复
+
+如果卸载工具已经删除了 Alter 支持文件，而且您没有单独备份，那么丢失的聊天和转录通常无法恢复。
+
+## 下次如何避免
+
+<Steps>
+  <Step title="切换版本前不要先卸载">
+    从 [alterhq.com/changelog](https://alterhq.com/changelog) 下载所需版本，然后直接替换 `Applications` 中的应用。
+  </Step>
+
+  <Step title="先备份本地数据">
+    将 Alter 数据复制到其他位置，或确认您的常规 Mac 备份已是最新。
+  </Step>
+
+  <Step title="排障时避免使用清理型卸载工具">
+    先尝试简单地替换应用。只有在您确实想完全重置时，才适合使用清理工具。
+  </Step>
+</Steps>
+
+## 相关帮助
+
+- [安全地重新安装或降级 Alter](/zh/how-to/reinstall-or-downgrade-alter)
+- [本地数据与隐私](/zh/references/local-data-and-privacy)

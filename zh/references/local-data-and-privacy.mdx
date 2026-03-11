@@ -1,0 +1,58 @@
+---
+title: "本地数据与隐私"
+description: "了解 Alter 在本地保存什么，哪些内容不会同步到云端，以及在重新安装前如何保护您的数据。"
+---
+
+Alter 会将您的聊天、转录和相关数据保存在您的 Mac 上。
+
+<Info>
+  **私密且仅限本地：** Alter 不使用云同步来备份您的聊天、会议转录或本地历史记录。
+</Info>
+
+## 哪些内容保留在您的 Mac 上
+
+- 聊天记录
+- 会议转录和录音
+- 本地 workspace 数据
+- Alter 为您在这台 Mac 上保存的其他应用数据
+
+如果您为某项任务使用云模型生成内容，或使用云转录，请求会发送到您选择的提供商。这和将 Alter 历史记录同步到云端不是一回事。
+
+## 这在实际中意味着什么
+
+- 默认情况下，您的数据只保留在您的 Mac 上
+- 重新安装 Alter 不会从云备份恢复旧聊天或转录
+- 更换到另一台 Mac 需要您自己备份或迁移
+
+## 在重新安装、降级或排障之前
+
+<Warning>
+  如果您想保留当前数据，请不要卸载 Alter。
+</Warning>
+
+如果您需要尝试其他版本：
+
+1. 从 [Alter changelog](https://alterhq.com/changelog) 下载所需版本。
+2. 退出 Alter。
+3. 将下载的应用拖到 `Applications` 文件夹中。
+4. 当 macOS 提示时，选择 **Replace**。
+
+这样会直接替换应用，而不会执行带清理的卸载。
+
+请参阅 [安全地重新安装或降级 Alter](/zh/how-to/reinstall-or-downgrade-alter)。
+
+## 为什么卸载工具会删除您的数据
+
+像 CleanMyMac 这样的工具通常会删除应用 **以及** `~/Library/Application Support` 中的支持文件。
+
+这可能会同时删除 Alter 的本地数据库和转录文件。
+
+## 如果您想先做备份
+
+- 打开 Alter 设置，如果有数据位置快捷入口，请直接使用
+- 将 Alter 数据文件夹复制到另一个安全位置
+- 在进行重大更改前，保持 Time Machine 等常规 Mac 备份可用
+
+## 如果您的数据已经丢失
+
+请参阅 [重新安装或清理后数据丢失](/zh/common-issues/data-missing-after-reinstall)。

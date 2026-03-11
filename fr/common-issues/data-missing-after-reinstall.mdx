@@ -1,0 +1,53 @@
+---
+title: "Donnees manquantes apres reinstallation ou nettoyage"
+description: "Comprenez pourquoi des chats et transcriptions peuvent disparaitre apres la desinstallation d'Alter et quelles options de recuperation peuvent encore exister."
+---
+
+## Ce qui se passe
+
+Apres avoir reinstalle Alter, vous ouvrez l'app et vos chats, transcriptions ou autre historique local ont disparu.
+
+Cela arrive souvent apres:
+
+- L'utilisation de CleanMyMac ou d'un autre outil de desinstallation
+- La suppression de l'app et de ses fichiers de support associes
+- Un downgrade fait en desinstallant d'abord au lieu de remplacer l'app dans `Applications`
+
+## Pourquoi cela arrive
+
+<Warning>
+  Les donnees Alter sont uniquement locales. Il n'existe pas de restauration cloud de l'historique pour les chats, les transcriptions ou les autres donnees locales de l'app.
+</Warning>
+
+Si un outil de desinstallation supprime les fichiers de support d'Alter, il peut effacer la base de donnees locale et les fichiers de transcription en meme temps que l'app.
+
+## Ce que vous pouvez verifier
+
+1. Ouvrez l'emplacement des donnees locales depuis les reglages d'Alter si le raccourci est encore disponible.
+2. Verifiez si les fichiers Alter sont toujours presents dans `~/Library/Application Support/Alter`.
+3. Si vous utilisez Time Machine ou une autre sauvegarde Mac, restaurez les donnees Alter manquantes depuis cette sauvegarde.
+
+## Quand la recuperation est peu probable
+
+Si l'outil de desinstallation a deja supprime les fichiers de support d'Alter et que vous n'avez pas de sauvegarde separee, les chats et transcriptions manquants ne peuvent en general pas etre restaures.
+
+## Comment eviter cela la prochaine fois
+
+<Steps>
+  <Step title="Ne desinstallez pas avant de changer de version">
+    Telechargez la version voulue depuis [alterhq.com/changelog](https://alterhq.com/changelog) et remplacez l'app dans `Applications`.
+  </Step>
+
+  <Step title="Sauvegardez d'abord les donnees locales">
+    Copiez vos donnees Alter vers un autre emplacement ou assurez-vous que votre sauvegarde Mac habituelle est a jour.
+  </Step>
+
+  <Step title="Evitez les desinstallateurs de nettoyage pour le depannage">
+    Essayez d'abord un simple remplacement de l'app. Les outils de nettoyage servent surtout si vous voulez une reinitialisation complete.
+  </Step>
+</Steps>
+
+## Aide associee
+
+- [Reinstaller ou retrograder Alter en toute securite](/fr/how-to/reinstall-or-downgrade-alter)
+- [Donnees locales et confidentialite](/fr/references/local-data-and-privacy)

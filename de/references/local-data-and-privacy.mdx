@@ -1,0 +1,58 @@
+---
+title: "Lokale Daten und Datenschutz"
+description: "Verstehen Sie, was Alter lokal speichert, was nicht in die Cloud synchronisiert wird und wie Sie Ihre Daten vor einer Neuinstallation schuetzen."
+---
+
+Alter speichert Ihre Chats, Transkripte und zugehoerigen Daten auf Ihrem Mac.
+
+<Info>
+  **Privat und lokal:** Alter verwendet keine Cloud-Synchronisierung, um ein Backup Ihrer Chats, Meeting-Transkripte oder lokalen Historie zu speichern.
+</Info>
+
+## Was auf Ihrem Mac bleibt
+
+- Chat-Verlauf
+- Meeting-Transkripte und Aufzeichnungen
+- Lokale Workspace-Daten
+- Andere App-Daten, die Alter fuer Ihr Konto auf diesem Mac speichert
+
+Wenn Sie Cloud-Modelle fuer die Generierung oder Cloud-Transkription fuer eine bestimmte Aufgabe verwenden, wird diese Anfrage an den gewaehlten Anbieter gesendet. Das ist etwas anderes als eine Cloud-Synchronisierung Ihres Alter-Verlaufs.
+
+## Was das in der Praxis bedeutet
+
+- Ihre Daten bleiben standardmaessig privat auf Ihrem Mac
+- Eine Neuinstallation von Alter stellt alte Chats oder Transkripte nicht aus einem Cloud-Backup wieder her
+- Ein Wechsel auf einen anderen Mac erfordert Ihr eigenes Backup oder einen Transferprozess
+
+## Vor dem Neuinstallieren, Downgrade oder Troubleshooting
+
+<Warning>
+  Deinstallieren Sie Alter nicht, wenn Sie Ihre aktuellen Daten behalten moechten.
+</Warning>
+
+Wenn Sie eine andere Version testen muessen:
+
+1. Laden Sie die gewuenschte Version aus dem [Alter changelog](https://alterhq.com/changelog) herunter.
+2. Beenden Sie Alter.
+3. Ziehen Sie die heruntergeladene App in Ihren Ordner `Applications`.
+4. Waehlen Sie **Replace**, wenn macOS danach fragt.
+
+Dadurch wird die App ersetzt, ohne eine Deinstallation mit Bereinigung durchzufuehren.
+
+Siehe [Alter sicher neu installieren oder downgraden](/de/how-to/reinstall-or-downgrade-alter).
+
+## Warum Deinstallations-Tools Ihre Daten loeschen koennen
+
+Tools wie CleanMyMac entfernen oft die App **und** ihre Support-Dateien in `~/Library/Application Support`.
+
+Dadurch koennen gleichzeitig die lokale Alter-Datenbank und die Transkriptdateien geloescht werden.
+
+## Wenn Sie vorher ein Backup wollen
+
+- Oeffnen Sie die Alter-Einstellungen und verwenden Sie den Shortcut zum Datenordner, falls vorhanden
+- Kopieren Sie Ihren Alter-Datenordner an einen anderen sicheren Ort
+- Halten Sie ein normales Mac-Backup wie Time Machine vor groesseren Aenderungen aktuell
+
+## Wenn Ihre Daten bereits fehlen
+
+Siehe [Daten fehlen nach Neuinstallation oder Bereinigung](/de/common-issues/data-missing-after-reinstall).

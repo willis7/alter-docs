@@ -1,0 +1,53 @@
+---
+title: "Dados ausentes apos reinstalacao ou limpeza"
+description: "Entenda por que chats e transcricoes podem desaparecer apos desinstalar o Alter e quais opcoes de recuperacao ainda podem existir."
+---
+
+## O que esta acontecendo?
+
+Depois de reinstalar o Alter, voce abre o app e seus chats, transcricoes ou outro historico local desapareceram.
+
+Isso costuma acontecer depois de:
+
+- Usar CleanMyMac ou outro utilitario de desinstalacao
+- Remover o app e os arquivos de suporte relacionados
+- Fazer downgrade desinstalando primeiro, em vez de substituir o app em `Applications`
+
+## Por que isso acontece
+
+<Warning>
+  Os dados do Alter sao apenas locais. Nao existe restauracao do historico na nuvem para chats, transcricoes ou outros dados locais do app.
+</Warning>
+
+Se uma ferramenta de desinstalacao apagar os arquivos de suporte do Alter, ela pode remover o banco de dados local e os arquivos de transcricao junto com o app.
+
+## O que voce pode verificar
+
+1. Abra a localizacao dos dados locais pelas configuracoes do Alter, se o atalho ainda estiver disponivel.
+2. Verifique se os arquivos do Alter ainda estao em `~/Library/Application Support/Alter`.
+3. Se voce usa Time Machine ou outro backup do Mac, restaure os dados ausentes do Alter a partir desse backup.
+
+## Quando a recuperacao e improvavel
+
+Se a ferramenta de desinstalacao ja removeu os arquivos de suporte do Alter e voce nao tem um backup separado, normalmente nao e possivel restaurar os chats e transcricoes ausentes.
+
+## Como evitar isso da proxima vez
+
+<Steps>
+  <Step title="Nao desinstale antes de mudar de versao">
+    Baixe a versao desejada em [alterhq.com/changelog](https://alterhq.com/changelog) e substitua o app em `Applications`.
+  </Step>
+
+  <Step title="Faca backup dos dados locais primeiro">
+    Copie os dados do Alter para outro local ou garanta que seu backup normal do Mac esteja atualizado.
+  </Step>
+
+  <Step title="Evite desinstaladores de limpeza para solucionar problemas">
+    Primeiro tente apenas substituir o app. Ferramentas de limpeza sao melhores apenas quando voce quer um reset completo.
+  </Step>
+</Steps>
+
+## Ajuda relacionada
+
+- [Reinstalar ou fazer downgrade do Alter com seguranca](/pt/how-to/reinstall-or-downgrade-alter)
+- [Dados locais e privacidade](/pt/references/local-data-and-privacy)

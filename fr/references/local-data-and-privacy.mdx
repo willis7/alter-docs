@@ -1,0 +1,58 @@
+---
+title: "Donnees locales et confidentialite"
+description: "Comprenez ce qu'Alter stocke localement, ce qui n'est pas synchronise dans le cloud et comment proteger vos donnees avant de reinstaller."
+---
+
+Alter stocke vos chats, transcriptions et donnees associees sur votre Mac.
+
+<Info>
+  **Prive et local:** Alter n'utilise pas de synchronisation cloud pour conserver une sauvegarde de vos chats, transcriptions de reunion ou historique local.
+</Info>
+
+## Ce qui reste sur votre Mac
+
+- Historique des chats
+- Transcriptions et enregistrements de reunion
+- Donnees locales de workspace
+- Autres donnees de l'app qu'Alter conserve pour votre compte sur ce Mac
+
+Si vous utilisez des modeles cloud pour la generation ou une transcription cloud pour une tache precise, cette requete est envoyee au fournisseur choisi. Cela est different d'une synchronisation cloud de votre historique Alter.
+
+## Ce que cela signifie en pratique
+
+- Vos donnees restent privees sur votre Mac par defaut
+- Reinstaller Alter ne restaure pas les anciens chats ou transcriptions depuis un backup cloud
+- Passer sur un autre Mac demande votre propre sauvegarde ou procedure de transfert
+
+## Avant de reinstaller, retrograder ou depanner
+
+<Warning>
+  Ne desinstallez pas Alter si vous voulez conserver vos donnees actuelles.
+</Warning>
+
+Si vous devez essayer une autre version:
+
+1. Telechargez la version voulue depuis [Alter changelog](https://alterhq.com/changelog).
+2. Quittez Alter.
+3. Glissez l'app telechargee dans votre dossier `Applications`.
+4. Choisissez **Replace** quand macOS le demande.
+
+Cela remplace l'app sans faire une desinstallation avec nettoyage.
+
+Voir [Reinstaller ou retrograder Alter en toute securite](/fr/how-to/reinstall-or-downgrade-alter).
+
+## Pourquoi les outils de desinstallation peuvent supprimer vos donnees
+
+Des utilitaires comme CleanMyMac suppriment souvent l'app **et** ses fichiers de support dans `~/Library/Application Support`.
+
+Cela peut effacer en meme temps la base de donnees locale d'Alter et les fichiers de transcription.
+
+## Si vous voulez une sauvegarde avant
+
+- Ouvrez les reglages d'Alter et utilisez le raccourci vers l'emplacement des donnees si disponible
+- Copiez le dossier de donnees Alter vers un autre emplacement sur et securise
+- Gardez une sauvegarde normale du Mac, comme Time Machine, avant les changements importants
+
+## Si vos donnees ont deja disparu
+
+Voir [Donnees manquantes apres reinstallation ou nettoyage](/fr/common-issues/data-missing-after-reinstall).

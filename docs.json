@@ -133,10 +133,11 @@
               {
                 "group": "Quick Tasks",
                 "pages": [
-                  "how-to/change-hotkey",
-                  "how-to/choose-language",
-                  "how-to/choose-generative-model",
-                  "how-to/use-byok"
+                "how-to/change-hotkey",
+                "how-to/choose-language",
+                "how-to/choose-generative-model",
+                "how-to/use-byok",
+                "how-to/reinstall-or-downgrade-alter"
                 ]
               },
               {
@@ -158,6 +159,7 @@
                   "common-issues/mic-not-transcribing",
                   "common-issues/hotkey-not-working",
                   "common-issues/tool-not-working",
+                  "common-issues/data-missing-after-reinstall",
                   "common-issues/custom-provider-not-showing",
                   "common-issues/models-not-listed-in-api-gateway"
                 ]
@@ -172,6 +174,7 @@
                 "pages": [
                   "references/faq-core",
                   "references/general-faq",
+                  "references/local-data-and-privacy",
                   "references/pricing-faq",
                   "references/shortcuts",
                   "references/docs-map"
@@ -342,10 +345,11 @@
               {
                 "group": "Tarefas Rápidas",
                 "pages": [
-                  "pt/how-to/change-hotkey",
-                  "pt/how-to/choose-language",
-                  "pt/how-to/choose-generative-model",
-                  "pt/how-to/use-byok"
+                "pt/how-to/change-hotkey",
+                "pt/how-to/choose-language",
+                "pt/how-to/choose-generative-model",
+                "pt/how-to/use-byok",
+                "pt/how-to/reinstall-or-downgrade-alter"
                 ]
               },
               {
@@ -367,6 +371,7 @@
                   "pt/common-issues/mic-not-transcribing",
                   "pt/common-issues/hotkey-not-working",
                   "pt/common-issues/tool-not-working",
+                  "pt/common-issues/data-missing-after-reinstall",
                   "pt/common-issues/custom-provider-not-showing",
                   "pt/common-issues/models-not-listed-in-api-gateway"
                 ]
@@ -381,6 +386,7 @@
                 "pages": [
                   "pt/references/faq-core",
                   "pt/references/general-faq",
+                  "pt/references/local-data-and-privacy",
                   "pt/references/pricing-faq",
                   "pt/references/shortcuts",
                   "pt/references/docs-map"
@@ -551,10 +557,11 @@
               {
                 "group": "Tâches rapides",
                 "pages": [
-                  "fr/how-to/change-hotkey",
-                  "fr/how-to/choose-language",
-                  "fr/how-to/choose-generative-model",
-                  "fr/how-to/use-byok"
+                "fr/how-to/change-hotkey",
+                "fr/how-to/choose-language",
+                "fr/how-to/choose-generative-model",
+                "fr/how-to/use-byok",
+                "fr/how-to/reinstall-or-downgrade-alter"
                 ]
               },
               {
@@ -576,6 +583,7 @@
                   "fr/common-issues/mic-not-transcribing",
                   "fr/common-issues/hotkey-not-working",
                   "fr/common-issues/tool-not-working",
+                  "fr/common-issues/data-missing-after-reinstall",
                   "fr/common-issues/custom-provider-not-showing",
                   "fr/common-issues/models-not-listed-in-api-gateway"
                 ]
@@ -590,6 +598,7 @@
                 "pages": [
                   "fr/references/faq-core",
                   "fr/references/general-faq",
+                  "fr/references/local-data-and-privacy",
                   "fr/references/pricing-faq",
                   "fr/references/shortcuts",
                   "fr/references/docs-map"
@@ -760,10 +769,11 @@
               {
                 "group": "Tareas rápidas",
                 "pages": [
-                  "es/how-to/change-hotkey",
-                  "es/how-to/choose-language",
-                  "es/how-to/choose-generative-model",
-                  "es/how-to/use-byok"
+                "es/how-to/change-hotkey",
+                "es/how-to/choose-language",
+                "es/how-to/choose-generative-model",
+                "es/how-to/use-byok",
+                "es/how-to/reinstall-or-downgrade-alter"
                 ]
               },
               {
@@ -785,6 +795,7 @@
                   "es/common-issues/mic-not-transcribing",
                   "es/common-issues/hotkey-not-working",
                   "es/common-issues/tool-not-working",
+                  "es/common-issues/data-missing-after-reinstall",
                   "es/common-issues/custom-provider-not-showing",
                   "es/common-issues/models-not-listed-in-api-gateway"
                 ]
@@ -799,6 +810,7 @@
                 "pages": [
                   "es/references/faq-core",
                   "es/references/general-faq",
+                  "es/references/local-data-and-privacy",
                   "es/references/pricing-faq",
                   "es/references/shortcuts",
                   "es/references/docs-map"
@@ -969,10 +981,11 @@
               {
                 "group": "Schnelle Aufgaben",
                 "pages": [
-                  "de/how-to/change-hotkey",
-                  "de/how-to/choose-language",
-                  "de/how-to/choose-generative-model",
-                  "de/how-to/use-byok"
+                "de/how-to/change-hotkey",
+                "de/how-to/choose-language",
+                "de/how-to/choose-generative-model",
+                "de/how-to/use-byok",
+                "de/how-to/reinstall-or-downgrade-alter"
                 ]
               },
               {
@@ -994,6 +1007,7 @@
                   "de/common-issues/mic-not-transcribing",
                   "de/common-issues/hotkey-not-working",
                   "de/common-issues/tool-not-working",
+                  "de/common-issues/data-missing-after-reinstall",
                   "de/common-issues/custom-provider-not-showing",
                   "de/common-issues/models-not-listed-in-api-gateway"
                 ]
@@ -1008,6 +1022,7 @@
                 "pages": [
                   "de/references/faq-core",
                   "de/references/general-faq",
+                  "de/references/local-data-and-privacy",
                   "de/references/pricing-faq",
                   "de/references/shortcuts",
                   "de/references/docs-map"
@@ -1178,10 +1193,11 @@
               {
                 "group": "快速任务",
                 "pages": [
-                  "zh/how-to/change-hotkey",
-                  "zh/how-to/choose-language",
-                  "zh/how-to/choose-generative-model",
-                  "zh/how-to/use-byok"
+                "zh/how-to/change-hotkey",
+                "zh/how-to/choose-language",
+                "zh/how-to/choose-generative-model",
+                "zh/how-to/use-byok",
+                "zh/how-to/reinstall-or-downgrade-alter"
                 ]
               },
               {
@@ -1203,6 +1219,7 @@
                   "zh/common-issues/mic-not-transcribing",
                   "zh/common-issues/hotkey-not-working",
                   "zh/common-issues/tool-not-working",
+                  "zh/common-issues/data-missing-after-reinstall",
                   "zh/common-issues/custom-provider-not-showing",
                   "zh/common-issues/models-not-listed-in-api-gateway"
                 ]
@@ -1217,6 +1234,7 @@
                 "pages": [
                   "zh/references/faq-core",
                   "zh/references/general-faq",
+                  "zh/references/local-data-and-privacy",
                   "zh/references/pricing-faq",
                   "zh/references/shortcuts",
                   "zh/references/docs-map"
@@ -1387,10 +1405,11 @@
               {
                 "group": "クイックタスク",
                 "pages": [
-                  "ja/how-to/change-hotkey",
-                  "ja/how-to/choose-language",
-                  "ja/how-to/choose-generative-model",
-                  "ja/how-to/use-byok"
+                "ja/how-to/change-hotkey",
+                "ja/how-to/choose-language",
+                "ja/how-to/choose-generative-model",
+                "ja/how-to/use-byok",
+                "ja/how-to/reinstall-or-downgrade-alter"
                 ]
               },
               {
@@ -1412,6 +1431,7 @@
                   "ja/common-issues/mic-not-transcribing",
                   "ja/common-issues/hotkey-not-working",
                   "ja/common-issues/tool-not-working",
+                  "ja/common-issues/data-missing-after-reinstall",
                   "ja/common-issues/custom-provider-not-showing",
                   "ja/common-issues/models-not-listed-in-api-gateway"
                 ]
@@ -1426,6 +1446,7 @@
                 "pages": [
                   "ja/references/faq-core",
                   "ja/references/general-faq",
+                  "ja/references/local-data-and-privacy",
                   "ja/references/pricing-faq",
                   "ja/references/shortcuts",
                   "ja/references/docs-map"

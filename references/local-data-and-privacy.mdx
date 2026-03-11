@@ -1,0 +1,58 @@
+---
+title: "Local data and privacy"
+description: "Understand what Alter stores locally, what is not synced to the cloud, and how to protect your data before reinstalling."
+---
+
+Alter stores your chats, transcripts, and related data on your Mac.
+
+<Info>
+  **Private and local-first:** Alter does not use cloud sync to keep a backup of your chats, meeting transcripts, or local history.
+</Info>
+
+## What stays on your Mac
+
+- Chat history
+- Meeting transcripts and recordings
+- Local workspace data
+- Other app data that Alter keeps for your account on that Mac
+
+If you use cloud models for generation or cloud transcription for a specific task, that request is sent to the provider you selected. That is separate from cloud syncing your Alter history.
+
+## What this means in practice
+
+- Your data stays private to your Mac by default
+- Reinstalling Alter does not restore old chats or transcripts from a cloud backup
+- Moving to another Mac requires your own backup or transfer process
+
+## Before you reinstall, downgrade, or troubleshoot
+
+<Warning>
+  Do not uninstall Alter if you want to keep your existing data.
+</Warning>
+
+If you need to try another version:
+
+1. Download the version you want from the [Alter changelog](https://alterhq.com/changelog).
+2. Quit Alter.
+3. Drag the downloaded app into your `Applications` folder.
+4. Choose **Replace** when macOS asks.
+
+This replaces the app without doing a cleanup-style uninstall.
+
+See [Reinstall or downgrade Alter safely](/how-to/reinstall-or-downgrade-alter).
+
+## Why uninstall tools can remove your data
+
+Utilities such as CleanMyMac often remove the app **and** its support files in `~/Library/Application Support`.
+
+That can delete the local Alter database and transcript files at the same time.
+
+## If you want a backup first
+
+- Open Alter settings and use the data-location shortcut if available
+- Copy your Alter data folder to another safe location
+- Keep a normal Mac backup such as Time Machine before major changes
+
+## If your data is already missing
+
+See [Data missing after reinstall or cleanup](/common-issues/data-missing-after-reinstall).
